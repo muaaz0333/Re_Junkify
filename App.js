@@ -9,6 +9,7 @@ import Onboarding3 from './components/Onboarding3';
 import SignIn1 from './components/SignIn1';
 import Signup from './components/Signup';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Onboard from './components/Onboard';
 
 
 const Stack = createNativeStackNavigator();
@@ -20,46 +21,57 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen
+
+
+      <Stack.Screen
+          name="Onboard"
+          component={Onboard}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+      
+        {/* <Stack.Screen
           name="Onboarding1"
           component={Onboarding1}
-          options={{headerShown:false}}
-          >
-          
-        </Stack.Screen>
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen> */}
 
 
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Onboarding2"
           component={Onboarding2}
-          options={{headerShown:false}}
-          >
-          
-        </Stack.Screen>
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen> */}
 
 
-        <Stack.Screen
+        {/* <Stack.Screen
           name="Onboarding3"
           component={Onboarding3}
-          options={{headerShown:false}}
-          >
-          
-        </Stack.Screen>
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen> */}
 
         <Stack.Screen
           name="SignIn1"
           component={SignIn1}
-          options={{headerShown:false}}
-          >
-          
+          options={{ headerShown: false }}
+        >
+
         </Stack.Screen>
 
         <Stack.Screen
           name="Signup"
           component={Signup}
-          options={{headerShown:false}}
-          >
-          
+          options={{ headerShown: false }}
+        >
+
         </Stack.Screen>
       </Stack.Navigator>
     </NavigationContainer>

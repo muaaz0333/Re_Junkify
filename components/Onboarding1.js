@@ -6,9 +6,9 @@ const Onboarding1 = () => {
     const navigation = useNavigation();
 
     return (
-        <View style={{ flex: 1 }}>
-            <View style={{ alignSelf: 'flex-start', marginTop:10 }}>
-                <TouchableOpacity style={styles.skiptxt} onPress={() => { }}>
+        <View style={{ flex: 1, }}>
+            <View style={{ alignSelf: 'flex-start', marginTop: 10 }}>
+                <TouchableOpacity style={styles.skiptxt} onPress={() => { navigation.navigate('SignIn1') }}>
                     <Text style={{ fontSize: 15, color: "#54408C", lineHeight: 20, fontFamily: 'Roboto' }}>
                         Skip
                     </Text>
@@ -33,12 +33,13 @@ const Onboarding1 = () => {
             </View>
 
             <View style={{ marginTop: 35 }}>
-                <TouchableOpacity onPress={()=> navigation.navigate("Onboarding2")}><Text style={styles.btncontinue} >Continue</Text></TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate("Onboarding2")}><Text style={styles.btncontinue} >Continue</Text></TouchableOpacity>
             </View>
 
 
             <View style={{ marginTop: 8 }}>
-                <TouchableOpacity  onPress={()=>navigation.navigate("SignIn1")}><Text style={{textAlign: 'center', marginLeft: 24,marginRight: 24, color: '#54408C',fontSize: 18,paddingVertical: 16, fontWeight:'bold'
+                <TouchableOpacity onPress={() => navigation.navigate("SignIn1")}><Text style={{
+                    textAlign: 'center', marginLeft: 24, marginRight: 24, color: '#54408C', fontSize: 18, paddingVertical: 16, fontWeight: 'bold'
                 }}>Sign in</Text></TouchableOpacity>
             </View>
 
@@ -64,6 +65,6 @@ const styles = StyleSheet.create({
         color: 'white',
         borderRadius: 12,
         fontSize: 20,
-        paddingVertical:16,
+        paddingVertical: 16,
     }
 })

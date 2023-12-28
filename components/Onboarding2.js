@@ -5,9 +5,9 @@ import { useNavigation } from '@react-navigation/native';
 const Onboarding2 = () => {
     const navigation = useNavigation();
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, }}>
             <View style={{ alignSelf: 'flex-start' }}>
-                <TouchableOpacity style={styles.skiptxt} onPress={() => { }}>
+                <TouchableOpacity style={styles.skiptxt} onPress={() => { navigation.navigate('SignIn1') }}>
                     <Text style={{ fontSize: 15, color: "#54408C", lineHeight: 20, fontFamily: 'Roboto' }}>
                         Skip
                     </Text>
@@ -32,12 +32,13 @@ const Onboarding2 = () => {
             </View>
 
             <View style={{ marginTop: 35 }}>
-                <TouchableOpacity onPress={()=> navigation.navigate("Onboarding3")}><Text style={styles.btncontinue} >Get Started</Text></TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate("Onboarding3")}><Text style={styles.btncontinue} >Get Started</Text></TouchableOpacity>
             </View>
 
 
             <View style={{ marginTop: 8 }}>
-                <TouchableOpacity  onPress={()=>navigation.navigate("SignIn1")}><Text style={{textAlign: 'center', marginLeft: 24,marginRight: 24, color: '#54408C',fontSize: 18,paddingVertical: 16, fontWeight:'bold'
+                <TouchableOpacity onPress={() => navigation.navigate("SignIn1")}><Text style={{
+                    textAlign: 'center', marginLeft: 24, marginRight: 24, color: '#54408C', fontSize: 18, paddingVertical: 16, fontWeight: 'bold'
                 }}>Sign in</Text></TouchableOpacity>
             </View>
 

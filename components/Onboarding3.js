@@ -5,9 +5,9 @@ import { useNavigation } from '@react-navigation/native';
 const Onboarding3 = () => {
     const navigation = useNavigation();
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, }}>
             <View style={{ alignSelf: 'flex-start' }}>
-                <TouchableOpacity style={styles.skiptxt} onPress={() => { }}>
+                <TouchableOpacity style={styles.skiptxt} onPress={() => { navigation.navigate('SignIn1') }}>
                     <Text style={{ fontSize: 15, color: "#54408C", lineHeight: 20, fontFamily: 'Roboto' }}>
                         Skip
                     </Text>
@@ -21,7 +21,7 @@ const Onboarding3 = () => {
 
 
             <Text style={{ fontSize: 15, color: "#A6A6A6", textAlign: "center", marginTop: 15, marginLeft: 42, marginRight: 41, paddingLeft: 25, paddingRight: 24, lineHeight: 25 }}>
-                Ready to embark on a quest for inspiration and knowledge? Your adventure begins now. Let's go! 
+                Ready to embark on a quest for inspiration and knowledge? Your adventure begins now. Let's go!
             </Text>
 
 
@@ -32,12 +32,13 @@ const Onboarding3 = () => {
             </View>
 
             <View style={{ marginTop: 37 }}>
-                <TouchableOpacity  onPress={()=>navigation.navigate("SignIn1")}><Text style={styles.btncontinue}>Get Started</Text></TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate("SignIn1")}><Text style={styles.btncontinue}>Get Started</Text></TouchableOpacity>
             </View>
 
 
             <View style={{ marginTop: 8 }}>
-                <TouchableOpacity  onPress={()=>navigation.navigate("SignIn1")}><Text style={{textAlign: 'center', marginLeft: 24,marginRight: 24, color: '#54408C',fontSize: 18,paddingVertical: 16, fontWeight:'bold'
+                <TouchableOpacity onPress={() => navigation.navigate("SignIn1")}><Text style={{
+                    textAlign: 'center', marginLeft: 24, marginRight: 24, color: '#54408C', fontSize: 18, paddingVertical: 16, fontWeight: 'bold'
                 }}>Sign in</Text></TouchableOpacity>
             </View>
 
