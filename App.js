@@ -7,6 +7,8 @@ import Onboarding1 from './components/Onboarding1';
 import Onboarding2 from './components/Onboarding2';
 import Onboarding3 from './components/Onboarding3';
 import SignIn1 from './components/SignIn1';
+import Signup from './components/Signup';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 
 const Stack = createNativeStackNavigator();
@@ -47,6 +49,14 @@ const App = () => {
         <Stack.Screen
           name="SignIn1"
           component={SignIn1}
+          options={{headerShown:false}}
+          >
+          
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="Signup"
+          component={Signup}
           options={{headerShown:false}}
           >
           

@@ -32,13 +32,13 @@ const Onboarding2 = () => {
             </View>
 
             <View style={{ marginTop: 35 }}>
-                <TouchableHighlight><Text style={styles.btncontinue} onPress={()=> navigation.navigate("Onboarding3")}>Get Started</Text></TouchableHighlight>
+                <TouchableOpacity onPress={()=> navigation.navigate("Onboarding3")}><Text style={styles.btncontinue} >Get Started</Text></TouchableOpacity>
             </View>
 
 
             <View style={{ marginTop: 8 }}>
-                <TouchableHighlight><Text style={{textAlign: 'center', marginLeft: 24,marginRight: 24, color: '#54408C',fontSize: 18,paddingVertical: 16, fontWeight:'bold'
-                }}>Sign in</Text></TouchableHighlight>
+                <TouchableOpacity  onPress={()=>navigation.navigate("SignIn1")}><Text style={{textAlign: 'center', marginLeft: 24,marginRight: 24, color: '#54408C',fontSize: 18,paddingVertical: 16, fontWeight:'bold'
+                }}>Sign in</Text></TouchableOpacity>
             </View>
 
             {/* <View style={{marginTop:22}}>
