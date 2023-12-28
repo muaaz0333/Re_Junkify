@@ -11,7 +11,7 @@ const SignIn1 = () => {
   return (
     <View style={{ flex: 1, margin: 20, padding: 10, }}>
       <View style={{ alignSelf: 'flex-start', marginTop: 13 }}>
-        <TouchableOpacity style={styles.skiptxt} onPress={() => { navigation.navigate('Onboarding3') }}>
+        <TouchableOpacity style={styles.skiptxt} onPress={() => { }}>
           <Image source={require('../assets/Icons/Arrow_Left.png')} />
         </TouchableOpacity>
       </View>
