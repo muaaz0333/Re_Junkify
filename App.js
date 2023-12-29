@@ -14,13 +14,16 @@ import VerificationEmail from './components/VerificationEmail';
 import EnterPhone from './components/EnterPhone';
 import VerificationPhone from './components/VerificationPhone';
 import SuccessVerification from './components/SuccessVerification';
+// import SplashScreen from 'react-native-splash-screen'
 
 
 const Stack = createNativeStackNavigator();
 
 const App = () => {
   useEffect(() => {
-    SplashScreen.hide();
+    setTimeout(()=>{
+      SplashScreen.hide();
+    }, 2000)
   }, []);
   return (
     <NavigationContainer>

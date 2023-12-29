@@ -1,5 +1,6 @@
 package com.bazarapp;
 import android.os.Bundle; // here
+
 import org.devio.rn.splashscreen.SplashScreen; // here
 
 import com.facebook.react.ReactActivity;

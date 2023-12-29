@@ -8,6 +8,10 @@ const SignIn1 = () => {
   const navigation = useNavigation();
   const [isSecureEntry, setIsSecureEntry] = useState(true)
 
+  const OnLoginHandler=()=>{
+
+  }
+
   return (
     <View style={{ flex: 1, margin: 20, padding: 10, }}>
       <View style={{ alignSelf: 'flex-start', marginTop: 13 }}>
@@ -63,7 +67,7 @@ const SignIn1 = () => {
       </View>
 
       <View style={{ marginTop: 24 }}>
-        <TouchableOpacity onPress={() => { }}><Text style={styles.btncontinue} >Login</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => {OnLoginHandler()}}><Text style={styles.btncontinue} >Login</Text></TouchableOpacity>
       </View>
 
       <View style={{ marginTop: 24 }}>

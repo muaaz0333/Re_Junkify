@@ -1,9 +1,16 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput } from 'react-native'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 
 const EnterPhone = () => {
     const navigation = useNavigation();
+    const[phone, setPhone]=useState();
+    
+    const contbtn=()=>{
+        setPhone("")
+        navigation.navigate('VerificationPhone',{phone:phone})
+
+    }
 
     return (
         <View style={{ flex: 1, margin: 10, padding: 10 }}>
@@ -22,7 +29,7 @@ const EnterPhone = () => {
                 <Text style={{ color: 'black', fontWeight: '700', fontSize: 15 }}>Phone Number</Text>
                 <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#E5E7E9', borderRadius: 10, marginTop: 6 }}>
                     <Image style={{ marginHorizontal: 12, marginVertical: 12 }} source={require('../assets/Icons/Call.png')} />
-                    <TextInput inputMode='numeric' style={{ fontSize: 17, color: 'black', fontWeight: '600' }}>+92 333 4246144</TextInput>
+                    <TextInput onChangeText={(text)=>setPhone(text)} inputMode='numeric' placeholder='+92 333 4246144' value={phone} style={{ fontSize: 17, color: 'black', fontWeight: '600' }}/>
                 </View>
             </View>
 
@@ -30,7 +37,7 @@ const EnterPhone = () => {
 
 
             <View style={{ marginTop: 43 }}>
-                <TouchableOpacity onPress={()=>navigation.navigate('VerificationPhone')}>
+                <TouchableOpacity onPress={()=>contbtn()}>
                     <Text style={styles.btncontinue}>Continue</Text>
                 </TouchableOpacity>
             </View>

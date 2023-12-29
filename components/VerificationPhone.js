@@ -1,8 +1,10 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput } from 'react-native'
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import { useNavigation } from '@react-navigation/native';
 
-const VerificationPhone = () => {
+const VerificationPhone = ({route}) => {
+    const {phone}=route.params;
+    // console.log(itm)
     const navigation = useNavigation();
     const firstInput = useRef()
     const secondInput = useRef()
@@ -18,7 +20,7 @@ const VerificationPhone = () => {
 
             <View style={{ alignItems: 'center' }}>
                 <Text style={{ fontSize: 23, color: "#121212", fontWeight: 'bold', marginTop: 29, lineHeight: 27, }}>Verification Phone</Text>
-                <Text style={{ marginVertical: 8, fontSize: 15, color: '#A6A6A6', paddingHorizontal:24, textAlign:'center' }}>Please Enter the code we just sent to phone number +92 333 4246144</Text>
+                <Text style={{ marginVertical: 8, fontSize: 15, color: '#A6A6A6', paddingHorizontal:24, textAlign:'center' }}>Please Enter the code we just sent to phone number {phone} </Text>
             </View>
 
             <View style={{ flexDirection: 'row', marginTop: 40, alignSelf: 'center' }}>
