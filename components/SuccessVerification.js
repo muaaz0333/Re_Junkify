@@ -3,7 +3,7 @@ import React from 'react'
 
 const SuccessVerification = () => {
   return (
-    <View style={{flex:1}}>
+    <View style={{flex:1,margin: 10, padding: 10 }}>
     <View style={{alignItems:'center', marginHorizontal: 107, marginTop:209 }}>
       <Image source={require ('../assets/Icons/Group.png')}/>
       </View>
