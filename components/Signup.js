@@ -141,7 +141,7 @@ const Signup = () => {
 
 
             <View style={{ marginTop: 24 }}>
-                <TouchableOpacity onPress={() => { }}><Text style={styles.btncontinue} >Register</Text></TouchableOpacity>
+                <TouchableOpacity onPress={() =>navigation.navigate("VerificationEmail")}><Text style={styles.btncontinue} >Register</Text></TouchableOpacity>
             </View>
 
             <View style={{ marginTop: 24 }}>

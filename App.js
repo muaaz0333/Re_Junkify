@@ -10,6 +10,10 @@ import SignIn1 from './components/SignIn1';
 import Signup from './components/Signup';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import Onboard from './components/Onboard';
+import VerificationEmail from './components/VerificationEmail';
+import EnterPhone from './components/EnterPhone';
+import VerificationPhone from './components/VerificationPhone';
+import SuccessVerification from './components/SuccessVerification';
 
 
 const Stack = createNativeStackNavigator();
@@ -69,6 +73,38 @@ const App = () => {
         <Stack.Screen
           name="Signup"
           component={Signup}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="VerificationEmail"
+          component={VerificationEmail}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="EnterPhone"
+          component={EnterPhone}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="VerificationPhone"
+          component={VerificationPhone}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="SuccessVerification"
+          component={SuccessVerification}
           options={{ headerShown: false }}
         >
 
