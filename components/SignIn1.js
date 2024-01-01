@@ -10,6 +10,7 @@ const SignIn1 = () => {
 
   const OnLoginHandler=()=>{
 
+    navigation.navigate("Home")
   }
 
   return (

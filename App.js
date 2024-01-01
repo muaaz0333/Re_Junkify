@@ -14,6 +14,8 @@ import VerificationEmail from './components/VerificationEmail';
 import EnterPhone from './components/EnterPhone';
 import VerificationPhone from './components/VerificationPhone';
 import SuccessVerification from './components/SuccessVerification';
+import Home from './components/Home';
+import Vendors from './components/Vendors';
 // import SplashScreen from 'react-native-splash-screen'
 
 
@@ -21,9 +23,11 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   useEffect(() => {
-    setTimeout(()=>{
-      SplashScreen.hide();
-    }, 2000)
+    // setTimeout(()=>{
+      
+    // }, 2000)
+
+    SplashScreen.hide();
   }, []);
   return (
     <NavigationContainer>
@@ -108,6 +112,21 @@ const App = () => {
         <Stack.Screen
           name="SuccessVerification"
           component={SuccessVerification}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="Home"
+          component={Home}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+        <Stack.Screen
+          name="Vendors"
+          component={Vendors}
           options={{ headerShown: false }}
         >
 

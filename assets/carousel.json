@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Special Offer",
+        "promo": "Discount 25%",
+        "image": "../assets/Images/imageslider.png"
+    },
+    {
+        "title": "Premium Offer",
+        "promo": "Discount 30%",
+        "image": "../assets/Images/imageslider.png"
+    },
+    {
+        "title": "Normal Offer",
+        "promo": "Discount 10%",
+        "image": "../assets/Images/imageslider.png"
+    }
+]

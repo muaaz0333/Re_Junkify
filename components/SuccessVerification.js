@@ -1,7 +1,10 @@
 import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput } from 'react-native'
 import React from 'react'
+import { useNavigation } from '@react-navigation/native';
 
 const SuccessVerification = () => {
+    const navigation = useNavigation();
+
   return (
     <View style={{flex:1,margin: 10, padding: 10 }}>
     <View style={{alignItems:'center', marginHorizontal: 107, marginTop:209 }}>
@@ -20,7 +23,7 @@ const SuccessVerification = () => {
 
 
 <View style={{ marginTop: 40 }}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>navigation.navigate("Home")}>
                     <Text style={styles.btnstarted}>Get Started</Text>
                 </TouchableOpacity>
             </View>

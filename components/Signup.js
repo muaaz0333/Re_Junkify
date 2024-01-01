@@ -25,7 +25,7 @@ const Signup = () => {
 
         // if (!/[^A-Za-z0-9]/.test(input)) {
         //     newSuggestions.push('Include at least one special character')
-        // }
+        
 
         setSuggestions(newSuggestions);
 
