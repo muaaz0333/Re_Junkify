@@ -16,6 +16,7 @@ import VerificationPhone from './components/VerificationPhone';
 import SuccessVerification from './components/SuccessVerification';
 import Home from './components/Home';
 import Vendors from './components/Vendors';
+import Authors from './components/Authors';
 // import SplashScreen from 'react-native-splash-screen'
 
 
@@ -127,6 +128,14 @@ const App = () => {
         <Stack.Screen
           name="Vendors"
           component={Vendors}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="Authors"
+          component={Authors}
           options={{ headerShown: false }}
         >
 

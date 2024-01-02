@@ -1,11 +1,11 @@
-import { View, Text, Image, FlatList, Dimensions, TouchableOpacity, StyleSheet, ScrollView } from 'react-native'
+import { View, Text, Image, FlatList, Dimensions, TouchableOpacity, StyleSheet, ScrollView, Modal } from 'react-native'
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import React, { useState } from 'react'
 import Category from './Category';
 import Cart from './Cart';
 import Profile from './Profile';
 import { Card } from 'react-native-paper';
-import { black } from 'react-native-paper/lib/typescript/styles/colors';
+import { black, white } from 'react-native-paper/lib/typescript/styles/colors';
 import { useNavigation } from '@react-navigation/native';
 import BottomTab from './BottomTab';
 
@@ -42,44 +42,72 @@ const bookdetails = [
     {
         id: '1',
         pic: require('../assets/Images/book1.png'),
-        detail: 'The Kite Runner',
-        price: '14.99'
+        title: 'A Million to one',
+        price: '14.99',
+        vendor: require('../assets/Images/VFrame1.png'),
+        about: 'One of the reasons we love React so much is how easy it is to reuse the same component wherever it makes sense.',
+        rating: '(4.0)',
+        ratingStars: 4,
     },
     {
         id: '2',
         pic: require('../assets/Images/book3.jpg'),
-        detail: 'The Kite Runner',
-        price: '19.99'
+        title: 'The Dragon Gate',
+        price: '19.99',
+        vendor: require('../assets/Images/VFrame2.png'),
+        about: 'One of the reasons we love React so much is how easy it is to reuse the same component wherever it makes sense.',
+        rating: '(5.0)',
+        ratingStars: 5,
     },
     {
         id: '3',
         pic: require('../assets/Images/image3.png'),
-        detail: 'The Kite Runner',
-        price: '34.99'
+        title: 'The Kite Runner',
+        price: '34.99',
+        vendor: require('../assets/Images/VFrame3.png'),
+        about: 'One of the reasons we love React so much is how easy it is to reuse the same component wherever it makes sense.',
+        rating: '(2.0)',
+        ratingStars: 2,
     },
     {
         id: '4',
         pic: require('../assets/Images/book4.jpg'),
-        detail: 'The Kite Runner',
-        price: '24.99'
+        title: 'The Caged Dragon',
+        price: '24.99',
+        vendor: require('../assets/Images/VFrame4.png'),
+        about: 'One of the reasons we love React so much is how easy it is to reuse the same component wherever it makes sense.',
+        rating: '(4.0)',
+        ratingStars: 4,
     },
     {
         id: '5',
         pic: require('../assets/Images/book1.png'),
-        detail: 'The Kite Runner',
-        price: '18'
+        title: 'A Million to one',
+        price: '18',
+        vendor: require('../assets/Images/VFrame5.png'),
+        about: 'One of the reasons we love React so much is how easy it is to reuse the same component wherever it makes sense.',
+        rating: '(3.0)',
+        ratingStars: 3,
     },
     {
         id: '6',
         pic: require('../assets/Images/book.jpg'),
-        detail: 'The Kite Runner',
-        price: '14.99'
+        title: 'Zombie Spacesuit',
+        price: '14.99',
+        vendor: require('../assets/Images/VFrame6.png'),
+        about: 'One of the reasons we love React so much is how easy it is to reuse the same component wherever it makes sense.',
+        rating: '(4.0)',
+        ratingStars: 4,
     },
     {
         id: '7',
         pic: require('../assets/Images/imageslider.png'),
-        detail: 'The Kite Runner',
-        price: '112.99'
+        title: 'Trials of Apollo',
+        price: '112.99',
+        vendor: require('../assets/Images/VFrame7.png'),
+        about: 'One of the reasons we love React so much is how easy it is to reuse the same component wherever it makes sense.',
+        rating: '(5.0)',
+        ratingStars: 5,
     },
 ]
 
@@ -153,10 +181,33 @@ const authorDetails = [
 ]
 
 
+
 const Home = () => {
+
+    const [img, setImg] = useState();
+    const [title, setTitle] = useState();
+    const [vendor, setVendor] = useState();
+    const [about, setAbout] = useState();
+    const [rating, setRating] = useState();
+    const [price, setPrice] = useState();
+    const [star, setStar] = useState();
+
+    const openModal = (pic, title,vendor, about,rating,price,ratingStars) => {
+        setImg(pic)
+        setTitle(title)
+        setVendor(vendor)
+        setAbout(about)
+        setRating(rating)
+        setPrice(price)
+        setStar(ratingStars)
+        setModalVisible(!modalVisible)
+    }
+
     const [data, setData] = useState([1, 2, 3]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const navigation = useNavigation();
+
+    const [modalVisible, setModalVisible] = useState(false);
 
     return (
         <View style={{ flex: 1, }}>
@@ -225,7 +276,7 @@ const Home = () => {
                 {/*  books flatlist */}
                 <View style={{ marginTop: 27, marginHorizontal: 24, flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Text style={{ fontSize: 19, color: 'black', fontWeight: 'bold' }}>Top of Week</Text>
-                    <TouchableOpacity onPress={() => { { } }}>
+                    <TouchableOpacity >
                         <Text style={{ color: '#54408C', fontSize: 16, fontWeight: '800' }}>
                             See all
                         </Text>
@@ -241,11 +292,13 @@ const Home = () => {
                         horizontal
                         renderItem={({ item, index }) => {
                             return (
-                                <View style={{ marginLeft: 24, marginTop: 16 }}>
+                                <TouchableOpacity style={{ marginLeft: 24, marginTop: 16 }}
+                                    onPress={() => openModal(item.pic, item.title, item.vendor, item.about, item.rating, item.price, item.ratingStars)}
+                                >
                                     <Image style={styles.image2} source={item.pic} />
-                                    <Text style={{ marginTop: 1, fontSize: 15, color: 'black', fontWeight: '700' }}>{item.detail}</Text>
+                                    <Text style={{ marginTop: 1, fontSize: 15, color: 'black', fontWeight: '700' }}>{item.title}</Text>
                                     <Text style={{ color: '#54408C', fontWeight: '700' }}>${item.price}</Text>
-                                </View>
+                                </TouchableOpacity>
                             )
                         }}
                     />
@@ -287,7 +340,7 @@ const Home = () => {
                 {/* Authors */}
                 <View style={{ marginTop: 32, marginHorizontal: 24, flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Text style={{ fontSize: 19, color: 'black', fontWeight: 'bold' }}>Authors</Text>
-                    <TouchableOpacity onPress={() => { { } }}>
+                    <TouchableOpacity onPress={() => { {navigation.navigate("Authors") } }}>
                         <Text style={{ color: '#54408C', fontSize: 16, fontWeight: '800' }}>
                             See all
                         </Text>
@@ -312,10 +365,183 @@ const Home = () => {
                     />
                 </View>
 
+
+
+
+
+
+
+
             </ScrollView>
             <View style={{ position: 'absolute', width: '100%', backgroundColor: 'white', bottom: 0, paddingVertical: 6 }}>
                 <BottomTab />
             </View>
+
+
+
+            <Modal
+                animationType="slide"
+                transparent={true}
+                visible={modalVisible}
+
+
+            >
+                <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.6)' }}>
+
+
+                    <View style={{ flex: 1, backgroundColor: 'white', marginTop: 60, elevation: 10, borderTopLeftRadius: 60, borderTopRightRadius: 60 }}>
+
+                        <View style={{ marginTop: 20 }}>
+
+                            <TouchableOpacity onPress={() => setModalVisible(false)}>
+                                <View style={{ height: 5, width: 56, backgroundColor: 'gray', alignSelf: 'center' }}></View>
+                            </TouchableOpacity>
+
+
+                            <View style={{ marginHorizontal: 85, marginTop: 19 }}>
+                                <Image style={{ borderRadius: 40, resizeMode: 'contain', width: 237, height: 313 }} source={img} />
+                            </View>
+
+                            <View>
+                                <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginHorizontal: 24, marginTop: 16 }}>
+
+                                    <Text style={{ fontSize: 18, color: 'black', fontWeight: '800' }}>
+                                        {title}
+                                    </Text>
+                                    <Image source={require('../assets/Icons/favourite.png')} />
+                                </View>
+                            </View>
+
+                            <View style={{ marginTop: 12, marginLeft: 24 }}>
+                                <Image style={{ width: 80, height: 24,resizeMode:'cover' }} source={vendor} />
+                            </View>
+
+                            <View style={{ marginTop: 14 }}>
+                                <Text style={{ marginLeft: 24, marginRight: 40, fontSize: 16, fontWeight: '400' }}>
+                                    {about}
+                                </Text>
+                            </View>
+
+                            <View style={{ marginTop: 24 }}>
+                                <Text style={{ fontSize: 19, color: 'black', fontWeight: 'bold', marginLeft: 24 }}>
+                                    Review
+                                </Text>
+                            </View>
+
+                            <View style={{ flexDirection: 'row', marginLeft: 24, marginTop: 8, alignItems: 'center' }}>
+                                    {
+                                        star == 1 ?
+                                            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/Star.png')} />
+                                                <Image source={require('../assets/Icons/Star.png')} />
+                                                <Image source={require('../assets/Icons/Star.png')} />
+                                                <Image source={require('../assets/Icons/Star.png')} />
+                                            </View>
+                                            :
+                                            null
+                                    }
+                                    {
+                                        star == 2 ?
+                                            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/Star.png')} />
+                                                <Image source={require('../assets/Icons/Star.png')} />
+                                                <Image source={require('../assets/Icons/Star.png')} />
+                                            </View>
+                                            :
+                                            null
+                                    }
+                                    {
+                                        star == 3 ?
+                                            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/Star.png')} />
+                                                <Image source={require('../assets/Icons/Star.png')} />
+                                            </View>
+                                            :
+                                            null
+                                    }
+                                    {
+                                        star == 4 ?
+                                            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/Star.png')} />
+                                            </View>
+                                            :
+                                            null
+                                    }
+                                    {
+                                        star == 5 ?
+                                            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                                <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            </View>
+                                            :
+                                            null
+                                    }
+                               
+                                {/* <Image style={{ marginRight: 4, height: 20, width: 20 }} source={require('../assets/Icons/StarYellow.png')} />
+                                <Image style={{ marginRight: 4, height: 20, width: 20 }} source={require('../assets/Icons/StarYellow.png')} />
+                                <Image style={{ marginRight: 4, height: 20, width: 20 }} source={require('../assets/Icons/StarYellow.png')} />
+                                <Image style={{ marginRight: 4, height: 20, width: 20 }} source={require('../assets/Icons/StarYellow.png')} />
+                                <Image style={{ marginRight: 4, height: 20, width: 20 }} source={require('../assets/Icons/Star.png')} /> */}
+                                <Text style={{ color: 'black', fontWeight: '900' }}>{rating}</Text>
+                            </View>
+
+                            <View style={{ flexDirection: 'row', marginLeft: 24, marginTop: 20, alignItems: 'center' }}>
+                                <View style={{ backgroundColor: '#E8E8E8', width: 24, height: 24, borderRadius: 12, justifyContent: 'center', alignItems: 'center' }}>
+                                    <Image source={require('../assets/Icons/Minus.png')} />
+                                </View>
+
+                                <View>
+                                    <Text style={{ fontSize: 18, color: 'black', fontWeight: '700', marginHorizontal: 13 }}> 1 </Text>
+                                </View>
+
+                                <View style={{ backgroundColor: '#54408C', width: 24, height: 24, borderRadius: 12, justifyContent: 'center', alignItems: 'center' }}>
+                                    <Image source={require('../assets/Icons/Plus.png')} />
+                                </View>
+
+                                <View>
+                                    <Text style={{ color: '#54408C', fontSize: 15, fontWeight: '700', marginLeft: 17 }}>
+                                        {price}
+                                    </Text>
+                                </View>
+
+                            </View>
+
+                            <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between' }}>
+                                <View style={{ marginLeft: 20, marginTop: 22 }}>
+                                    <TouchableOpacity>
+                                        <Text style={styles.btncontinue}>
+                                            Continue Shopping
+                                        </Text>
+                                    </TouchableOpacity>
+                                </View>
+
+                                <View style={{ marginLeft: 12, marginTop: 22, marginRight: 24 }}>
+                                    <TouchableOpacity>
+                                        <Text style={styles.btnviewcart}>View Cart</Text>
+                                    </TouchableOpacity>
+                                </View>
+                            </View>
+
+
+                        </View>
+
+
+                    </View>
+                </View>
+            </Modal>
         </View>
     )
 }
@@ -348,5 +574,29 @@ const styles = StyleSheet.create({
         width: 130,
         height: 204,
         borderRadius: 10
-    }
+    },
+    btncontinue: {
+        backgroundColor: '#54408C',
+        textAlign: 'center',
+        // marginLeft: 24,
+        // marginRight: 24,
+        color: 'white',
+        borderRadius: 27,
+        fontSize: 18,
+        paddingVertical: 11,
+        fontWeight: '700',
+        paddingHorizontal: 28
+    },
+    btnviewcart: {
+        backgroundColor: '#F0F3F4',
+        textAlign: 'center',
+        // marginLeft: 24,
+        // marginRight: 24,
+        color: '#54408C',
+        borderRadius: 27,
+        fontSize: 18,
+        paddingVertical: 11,
+        fontWeight: '700',
+        paddingHorizontal: 22
+    },
 })
