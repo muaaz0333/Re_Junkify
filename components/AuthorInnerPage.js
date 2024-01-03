@@ -289,7 +289,7 @@ import { useNavigation } from '@react-navigation/native';
 const AuthorInnerPage = ({route}) => {
     const navigation = useNavigation()
     const{item}=route.params;
-    console.log(item)
+    // console.log(item)
     return (
         <ScrollView style={{ flex: 1 }}>
             {/* home app bar */}

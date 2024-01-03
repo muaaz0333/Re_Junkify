@@ -498,7 +498,7 @@ const Home = () => {
 
             {/* home app bar */}
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 16, marginHorizontal: 24 }}>
-                <TouchableOpacity>
+                <TouchableOpacity onPress={()=>navigation.navigate("HomeSearch")}>
                     <Image source={require("../assets/Icons/Search.png")} style={{ tintColor: 'black' }} />
                 </TouchableOpacity>
 

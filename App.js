@@ -18,6 +18,10 @@ import Home from './components/Home';
 import Vendors from './components/Vendors';
 import Authors from './components/Authors';
 import AuthorInnerPage from './components/AuthorInnerPage';
+import Category from './components/Category';
+import CategorySearch from './components/CategorySearch';
+import HomeSearch from './components/HomeSearch';
+import Profile from './components/Profile';
 // import SplashScreen from 'react-native-splash-screen'
 
 
@@ -145,6 +149,38 @@ const App = () => {
         <Stack.Screen
           name="AuthorInnerPage"
           component={AuthorInnerPage}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="Category"
+          component={Category}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="CategorySearch"
+          component={CategorySearch}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="HomeSearch"
+          component={HomeSearch}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="Profile"
+          component={Profile}
           options={{ headerShown: false }}
         >
 

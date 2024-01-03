@@ -1,33 +1,104 @@
-import { StyleSheet, Text, View, Image } from 'react-native'
-import React from 'react'
+import { StyleSheet, Text, View, Image, TouchableOpacity, KeyboardAvoidingView, Keyboard } from 'react-native'
+import React, { useState,useEffect } from 'react'
+import { useNavigation , useIsFocused} from '@react-navigation/native';
+
+
+
 
 
 
 
 const BottomTab = () => {
+
+  const isFocused = useIsFocused();
+
+    useEffect(() => {
+        const routeName = navigation?.getState()?.routes[navigation?.getState()?.index]?.name;
+        switch (routeName) {
+            case "Category":
+                handleTabPress("Category");
+                break;
+            case "Cart":
+                handleTabPress("Cart");
+                break;
+            case "Profile":
+                handleTabPress("Profile");
+                break;
+            default:
+                // Handle default case if needed
+                break;
+        }
+    }, [isFocused, navigation]);
+    const handleTabPress = (tab) => {
+      // Navigate to the selected tab
+      navigation.navigate(tab);
+  };
+
+  const handleColorChange = (tab) => {
+      const routeName = navigation?.getState()?.routes[navigation?.getState()?.index]?.name;
+      return routeName === tab ? '#54408C' : 'gray';
+  };
+
+
+
+
+  
+//   const [home, setHome]=useState(true)
+//   const [category, setCategory]=useState(false)
+//   const [cart, setCart]=useState(false)
+//   const [profile, setProfile]=useState(false)
+//   const homefun=()=>{
+
+//   }
+//   const categoryfun=()=>{
+//     setHome(false)
+//     setCategory(true)
+//     navigation.navigate('Category')
+//   }
+//   const cartfun=()=>{
+
+//   }
+//   const profilefun=()=>{
+
+//   }
+
+  const navigation = useNavigation();
   return (
-    <View style={{flex:1, flexDirection:'row', alignItems:'center', justifyContent:'space-evenly'}}>
-      
-      
-      <View style={{alignItems:'center'}}>
-        <Image source={require("../assets/Icons/Home-Fill.png")}/>
-        <Text>Home</Text>
-      </View>
+    <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly' }}>
 
-      <View style={{alignItems:'center'}}>
-      <Image source={require("../assets/Icons/category.png")}/>
-        <Text>Category</Text>
-      </View>
 
-      <View style={{alignItems:'center'}}>
-      <Image source={require("../assets/Icons/Cart.png")}/>
-        <Text>Cart</Text>
-      </View>
 
-      <View style={{alignItems:'center'}}>
-      <Image source={require("../assets/Icons/Profile.png")}/>
-        <Text>Profile</Text>
-      </View>
+
+      <TouchableOpacity onPress={()=>navigation.navigate('Home')}>
+        <View style={{ alignItems: 'center' }}>
+          <Image style={{tintColor:handleColorChange("Home")}} source={require("../assets/Icons/Home-Fill.png")} />
+          <Text style={{}}>Home</Text>
+        </View>
+      </TouchableOpacity>
+
+
+      <TouchableOpacity onPress={()=>navigation.navigate('Category')}>
+        <View style={{ alignItems: 'center' }}>
+          <Image style={{tintColor: handleColorChange("Category")}} source={require("../assets/Icons/category.png")} />
+          <Text style={{}}>Category</Text>
+        </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity >
+        <View style={{ alignItems: 'center' }}>
+          <Image style={{tintColor: handleColorChange("Cart")}} source={require("../assets/Icons/Cart.png")} />
+          <Text style={{}}>Cart</Text>
+        </View>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={()=>navigation.navigate('Profile')}>
+        <View style={{ alignItems: 'center' }}>
+          <Image style={{tintColor:handleColorChange("Profile")}} source={require("../assets/Icons/Profile.png")} />
+          <Text style={{}}>Profile</Text>
+        </View>
+      </TouchableOpacity>
+
+
     </View>
   )
 }
