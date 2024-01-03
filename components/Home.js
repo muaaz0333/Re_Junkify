@@ -135,48 +135,331 @@ const vendordetails = [
     },
 ]
 
+// const authorDetails = [
+//     {
+//         id: '1',
+//         pic: require('../assets/Images/Author7.png'),
+//         name: 'Anna',
+//         Designation: 'Writer'
+//     },
+//     {
+//         id: '2',
+//         pic: require('../assets/Images/Author1.png'),
+//         name: 'Tess Gunty',
+//         Designation: 'Novelist'
+//     },
+//     {
+//         id: '3',
+//         pic: require('../assets/Images/Author2.png'),
+//         name: 'Richard',
+//         Designation: 'Writer'
+//     },
+//     {
+//         id: '4',
+//         pic: require('../assets/Images/Author3.png'),
+//         name: 'John Dree',
+//         Designation: 'Composer'
+//     },
+//     {
+//         id: '5',
+//         pic: require('../assets/Images/Author4.png'),
+//         name: 'Nina',
+//         Designation: 'Writer'
+//     },
+//     {
+//         id: '6',
+//         pic: require('../assets/Images/Author5.png'),
+//         name: 'Lucy',
+//         Designation: 'Writer'
+//     },
+//     {
+//         id: '7',
+//         pic: require('../assets/Images/Author6.png'),
+//         name: 'AB John',
+//         Designation: 'Writer'
+//     },
+// ]
+
 const authorDetails = [
     {
-        id: '1',
-        pic: require('../assets/Images/Author7.png'),
+        image: require('../assets/Images/Author7.png'),
+        designation: 'Novelist',
         name: 'Anna',
-        Designation: 'Writer'
+        ratingStars: 5,
+        rating: '(5.0)',
+        about: 'Anna is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+
+        Product1:
+
+        {
+            productImg: require('../assets/Images/book.jpg'),
+            productTitle: 'The da vinci Code',
+            productPrice: '19.99'
+        },
+
+        Product2:
+
+        {
+            productImg: require('../assets/Images/book1.png'),
+            productTitle: 'Carrie Fisher',
+            productPrice: '27.12'
+        },
+
+        Product3:
+
+        {
+            productImg: require('../assets/Images/book3.jpg'),
+            productTitle: 'The Good Sister',
+            productPrice: '27.12'
+        },
+
+        Product4:
+
+        {
+            productImg: require('../assets/Images/book4.jpg'),
+            productTitle: 'The Waiting',
+            productPrice: '27.12'
+        },
     },
     {
-        id: '2',
-        pic: require('../assets/Images/Author1.png'),
-        name: 'Tess Gunty',
-        Designation: 'Novelist'
-    },
-    {
-        id: '3',
-        pic: require('../assets/Images/Author2.png'),
-        name: 'Richard',
-        Designation: 'Writer'
-    },
-    {
-        id: '4',
-        pic: require('../assets/Images/Author3.png'),
-        name: 'John Dree',
-        Designation: 'Composer'
-    },
-    {
-        id: '5',
-        pic: require('../assets/Images/Author4.png'),
+        image: require('../assets/Images/Author5.png'),
+        designation: 'Writer',
         name: 'Nina',
-        Designation: 'Writer'
+        ratingStars: 4,
+        rating: '(4.0)',
+        about: 'Nina is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+
+        Product1:
+
+        {
+            productImg: require('../assets/Images/book.jpg'),
+            productTitle: 'The da vinci Code',
+            productPrice: '19.99'
+        },
+
+        Product2:
+
+        {
+            productImg: require('../assets/Images/book1.png'),
+            productTitle: 'Carrie Fisher',
+            productPrice: '27.12'
+        },
+
+        Product3:
+
+        {
+            productImg: require('../assets/Images/book3.jpg'),
+            productTitle: 'The Good Sister',
+            productPrice: '27.12'
+        },
+
+        Product4:
+
+        {
+            productImg: require('../assets/Images/book4.jpg'),
+            productTitle: 'The Waiting',
+            productPrice: '27.12'
+        },
     },
     {
-        id: '6',
-        pic: require('../assets/Images/Author5.png'),
+        image: require('../assets/Images/Author1.png'),
+        designation: 'Novelist',
+        name: 'Jack',
+        ratingStars: 3,
+        rating: '(3.0)',
+        about: 'Jack is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+
+        Product1:
+
+        {
+            productImg: require('../assets/Images/book.jpg'),
+            productTitle: 'The da vinci Code',
+            productPrice: '19.99'
+        },
+
+        Product2:
+
+        {
+            productImg: require('../assets/Images/book1.png'),
+            productTitle: 'Carrie Fisher',
+            productPrice: '27.12'
+        },
+
+        Product3:
+
+        {
+            productImg: require('../assets/Images/book3.jpg'),
+            productTitle: 'The Good Sister',
+            productPrice: '27.12'
+        },
+
+        Product4:
+
+        {
+            productImg: require('../assets/Images/book4.jpg'),
+            productTitle: 'The Waiting',
+            productPrice: '27.12'
+        },
+    },
+    {
+        image: require('../assets/Images/Author6.png'),
+        designation: 'Novelist',
+        name: 'John A',
+        ratingStars: 5,
+        rating: '(5.0)',
+        about: 'John is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+
+        Product1:
+
+        {
+            productImg: require('../assets/Images/book.jpg'),
+            productTitle: 'The da vinci Code',
+            productPrice: '19.99'
+        },
+
+        Product2:
+
+        {
+            productImg: require('../assets/Images/book1.png'),
+            productTitle: 'Carrie Fisher',
+            productPrice: '27.12'
+        },
+
+        Product3:
+
+        {
+            productImg: require('../assets/Images/book3.jpg'),
+            productTitle: 'The Good Sister',
+            productPrice: '27.12'
+        },
+
+        Product4:
+
+        {
+            productImg: require('../assets/Images/book4.jpg'),
+            productTitle: 'The Waiting',
+            productPrice: '27.12'
+        },
+    },
+    {
+        image: require('../assets/Images/Author2.png'),
+        designation: 'Novelist',
+        name: 'Smith',
+        ratingStars: 2,
+        rating: '(2.0)',
+        about: 'Smith is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+
+        Product1:
+
+        {
+            productImg: require('../assets/Images/book.jpg'),
+            productTitle: 'The da vinci Code',
+            productPrice: '19.99'
+        },
+
+        Product2:
+
+        {
+            productImg: require('../assets/Images/book1.png'),
+            productTitle: 'Carrie Fisher',
+            productPrice: '27.12'
+        },
+
+        Product3:
+
+        {
+            productImg: require('../assets/Images/book3.jpg'),
+            productTitle: 'The Good Sister',
+            productPrice: '27.12'
+        },
+
+        Product4:
+
+        {
+            productImg: require('../assets/Images/book4.jpg'),
+            productTitle: 'The Waiting',
+            productPrice: '27.12'
+        },
+    },
+    {
+        image: require('../assets/Images/Author3.png'),
+        designation: 'Novelist',
+        name: 'John Lee',
+        ratingStars: 1,
+        rating: '(1.0)',
+        about: 'Lee is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+
+        Product1:
+
+        {
+            productImg: require('../assets/Images/book.jpg'),
+            productTitle: 'The da vinci Code',
+            productPrice: '19.99'
+        },
+
+        Product2:
+
+        {
+            productImg: require('../assets/Images/book1.png'),
+            productTitle: 'Carrie Fisher',
+            productPrice: '27.12'
+        },
+
+        Product3:
+
+        {
+            productImg: require('../assets/Images/book3.jpg'),
+            productTitle: 'The Good Sister',
+            productPrice: '27.12'
+        },
+
+        Product4:
+
+        {
+            productImg: require('../assets/Images/book4.jpg'),
+            productTitle: 'The Waiting',
+            productPrice: '27.12'
+        },
+    },
+    {
+        image: require('../assets/Images/Author4.png'),
+        designation: 'Writer',
         name: 'Lucy',
-        Designation: 'Writer'
-    },
-    {
-        id: '7',
-        pic: require('../assets/Images/Author6.png'),
-        name: 'AB John',
-        Designation: 'Writer'
+        ratingStars: 4,
+        rating: '(4.0)',
+        about: 'Steve is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+
+        Product1:
+
+        {
+            productImg: require('../assets/Images/book.jpg'),
+            productTitle: 'The da vinci Code',
+            productPrice: '19.99'
+        },
+
+        Product2:
+
+        {
+            productImg: require('../assets/Images/book1.png'),
+            productTitle: 'Carrie Fisher',
+            productPrice: '27.12'
+        },
+
+        Product3:
+
+        {
+            productImg: require('../assets/Images/book3.jpg'),
+            productTitle: 'The Good Sister',
+            productPrice: '27.12'
+        },
+
+        Product4:
+
+        {
+            productImg: require('../assets/Images/book4.jpg'),
+            productTitle: 'The Waiting',
+            productPrice: '27.12'
+        },
     },
 ]
 
@@ -192,7 +475,7 @@ const Home = () => {
     const [price, setPrice] = useState();
     const [star, setStar] = useState();
 
-    const openModal = (pic, title,vendor, about,rating,price,ratingStars) => {
+    const openModal = (pic, title, vendor, about, rating, price, ratingStars) => {
         setImg(pic)
         setTitle(title)
         setVendor(vendor)
@@ -340,7 +623,7 @@ const Home = () => {
                 {/* Authors */}
                 <View style={{ marginTop: 32, marginHorizontal: 24, flexDirection: 'row', justifyContent: 'space-between' }}>
                     <Text style={{ fontSize: 19, color: 'black', fontWeight: 'bold' }}>Authors</Text>
-                    <TouchableOpacity onPress={() => { {navigation.navigate("Authors") } }}>
+                    <TouchableOpacity onPress={() => { { navigation.navigate("Authors") } }}>
                         <Text style={{ color: '#54408C', fontSize: 16, fontWeight: '800' }}>
                             See all
                         </Text>
@@ -355,11 +638,13 @@ const Home = () => {
                         horizontal
                         renderItem={({ item, index }) => {
                             return (
-                                <View style={{ marginLeft: 24, marginBottom: 90 }}>
-                                    <Image style={{ height: 102, width: 102, borderRadius: 50, resizeMode: 'contain' }} source={item.pic} />
+                                <TouchableOpacity
+                                    onPress={() => navigation.navigate("AuthorInnerPage",{item:item})}
+                                    style={{ marginLeft: 24, marginBottom: 90 }}>
+                                    <Image style={{ height: 102, width: 102, borderRadius: 50, resizeMode: 'contain' }} source={item.image} />
                                     <Text style={{ marginTop: 1, fontSize: 18, color: 'black', fontWeight: '700', marginLeft: 3 }}>{item.name}</Text>
-                                    <Text style={{ color: 'gray', fontWeight: '700', marginLeft: 3 }}>{item.Designation}</Text>
-                                </View>
+                                    <Text style={{ color: 'gray', fontWeight: '700', marginLeft: 3 }}>{item.designation}</Text>
+                                </TouchableOpacity>
                             )
                         }}
                     />
@@ -413,7 +698,7 @@ const Home = () => {
                             </View>
 
                             <View style={{ marginTop: 12, marginLeft: 24 }}>
-                                <Image style={{ width: 80, height: 24,resizeMode:'cover' }} source={vendor} />
+                                <Image style={{ width: 80, height: 24, resizeMode: 'cover' }} source={vendor} />
                             </View>
 
                             <View style={{ marginTop: 14 }}>
@@ -429,67 +714,67 @@ const Home = () => {
                             </View>
 
                             <View style={{ flexDirection: 'row', marginLeft: 24, marginTop: 8, alignItems: 'center' }}>
-                                    {
-                                        star == 1 ?
-                                            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/Star.png')} />
-                                                <Image source={require('../assets/Icons/Star.png')} />
-                                                <Image source={require('../assets/Icons/Star.png')} />
-                                                <Image source={require('../assets/Icons/Star.png')} />
-                                            </View>
-                                            :
-                                            null
-                                    }
-                                    {
-                                        star == 2 ?
-                                            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/Star.png')} />
-                                                <Image source={require('../assets/Icons/Star.png')} />
-                                                <Image source={require('../assets/Icons/Star.png')} />
-                                            </View>
-                                            :
-                                            null
-                                    }
-                                    {
-                                        star == 3 ?
-                                            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/Star.png')} />
-                                                <Image source={require('../assets/Icons/Star.png')} />
-                                            </View>
-                                            :
-                                            null
-                                    }
-                                    {
-                                        star == 4 ?
-                                            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/Star.png')} />
-                                            </View>
-                                            :
-                                            null
-                                    }
-                                    {
-                                        star == 5 ?
-                                            <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                                <Image source={require('../assets/Icons/StarYellow.png')} />
-                                            </View>
-                                            :
-                                            null
-                                    }
-                               
+                                {
+                                    star == 1 ?
+                                        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/Star.png')} />
+                                            <Image source={require('../assets/Icons/Star.png')} />
+                                            <Image source={require('../assets/Icons/Star.png')} />
+                                            <Image source={require('../assets/Icons/Star.png')} />
+                                        </View>
+                                        :
+                                        null
+                                }
+                                {
+                                    star == 2 ?
+                                        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/Star.png')} />
+                                            <Image source={require('../assets/Icons/Star.png')} />
+                                            <Image source={require('../assets/Icons/Star.png')} />
+                                        </View>
+                                        :
+                                        null
+                                }
+                                {
+                                    star == 3 ?
+                                        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/Star.png')} />
+                                            <Image source={require('../assets/Icons/Star.png')} />
+                                        </View>
+                                        :
+                                        null
+                                }
+                                {
+                                    star == 4 ?
+                                        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/Star.png')} />
+                                        </View>
+                                        :
+                                        null
+                                }
+                                {
+                                    star == 5 ?
+                                        <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                            <Image source={require('../assets/Icons/StarYellow.png')} />
+                                        </View>
+                                        :
+                                        null
+                                }
+
                                 {/* <Image style={{ marginRight: 4, height: 20, width: 20 }} source={require('../assets/Icons/StarYellow.png')} />
                                 <Image style={{ marginRight: 4, height: 20, width: 20 }} source={require('../assets/Icons/StarYellow.png')} />
                                 <Image style={{ marginRight: 4, height: 20, width: 20 }} source={require('../assets/Icons/StarYellow.png')} />

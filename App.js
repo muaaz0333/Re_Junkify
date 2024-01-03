@@ -17,6 +17,7 @@ import SuccessVerification from './components/SuccessVerification';
 import Home from './components/Home';
 import Vendors from './components/Vendors';
 import Authors from './components/Authors';
+import AuthorInnerPage from './components/AuthorInnerPage';
 // import SplashScreen from 'react-native-splash-screen'
 
 
@@ -136,6 +137,14 @@ const App = () => {
         <Stack.Screen
           name="Authors"
           component={Authors}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="AuthorInnerPage"
+          component={AuthorInnerPage}
           options={{ headerShown: false }}
         >
 

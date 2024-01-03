@@ -7,287 +7,286 @@ const Tab = createMaterialTopTabNavigator();
 
 const authorObjects = [
   {
-    image: require('../assets/Images/Author7.png'),
-    designation: 'Novelist',
-    name: 'Anna',
-    ratingStars: 4,
-    rating: '(4.0)',
-    about: 'Anna is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+      image: require('../assets/Images/Author7.png'),
+      designation: 'Novelist',
+      name: 'Anna',
+      ratingStars: 5,
+      rating: '(5.0)',
+      about: 'Anna is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
 
-    Product1:
+      Product1:
 
-    {
-      productImg: require('../assets/Images/book.jpg'),
-      productTitle: 'The da vinci Code',
-      productPrice: '19.99'
-    },
+      {
+          productImg: require('../assets/Images/book.jpg'),
+          productTitle: 'The da vinci Code',
+          productPrice: '19.99'
+      },
 
-    Product2:
+      Product2:
 
-    {
-      productImg: require('../assets/Images/book1.png'),
-      productTitle: 'Carrie Fisher',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book1.png'),
+          productTitle: 'Carrie Fisher',
+          productPrice: '27.12'
+      },
 
-    Product3:
+      Product3:
 
-    {
-      productImg: require('../assets/Images/book3.jpg'),
-      productTitle: 'The Good Sister',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book3.jpg'),
+          productTitle: 'The Good Sister',
+          productPrice: '27.12'
+      },
 
-    Product4:
+      Product4:
 
-    {
-      productImg: require('../assets/Images/book4.jpg'),
-      productTitle: 'The Waiting',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book4.jpg'),
+          productTitle: 'The Waiting',
+          productPrice: '27.12'
+      },
   },
   {
-    image: require('../assets/Images/Author5.png'),
-    designation: 'Writer',
-    name: 'Nina',
-    ratingStars: 4,
-    rating: '(4.0)',
-    about: 'Nina is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+      image: require('../assets/Images/Author5.png'),
+      designation: 'Writer',
+      name: 'Nina',
+      ratingStars: 4,
+      rating: '(4.0)',
+      about: 'Nina is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
 
-    Product1:
+      Product1:
 
-    {
-      productImg: require('../assets/Images/book.jpg'),
-      productTitle: 'The da vinci Code',
-      productPrice: '19.99'
-    },
+      {
+          productImg: require('../assets/Images/book.jpg'),
+          productTitle: 'The da vinci Code',
+          productPrice: '19.99'
+      },
 
-    Product2:
+      Product2:
 
-    {
-      productImg: require('../assets/Images/book1.png'),
-      productTitle: 'Carrie Fisher',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book1.png'),
+          productTitle: 'Carrie Fisher',
+          productPrice: '27.12'
+      },
 
-    Product3:
+      Product3:
 
-    {
-      productImg: require('../assets/Images/book3.jpg'),
-      productTitle: 'The Good Sister',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book3.jpg'),
+          productTitle: 'The Good Sister',
+          productPrice: '27.12'
+      },
 
-    Product4:
+      Product4:
 
-    {
-      productImg: require('../assets/Images/book4.jpg'),
-      productTitle: 'The Waiting',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book4.jpg'),
+          productTitle: 'The Waiting',
+          productPrice: '27.12'
+      },
   },
   {
-    image: require('../assets/Images/Author1.png'),
-    designation: 'Novelist',
-    name: 'Jack',
-    ratingStars: 4,
-    rating: '(4.0)',
-    about: 'Jack is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+      image: require('../assets/Images/Author1.png'),
+      designation: 'Novelist',
+      name: 'Jack',
+      ratingStars: 3,
+      rating: '(3.0)',
+      about: 'Jack is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
 
-    Product1:
+      Product1:
 
-    {
-      productImg: require('../assets/Images/book.jpg'),
-      productTitle: 'The da vinci Code',
-      productPrice: '19.99'
-    },
+      {
+          productImg: require('../assets/Images/book.jpg'),
+          productTitle: 'The da vinci Code',
+          productPrice: '19.99'
+      },
 
-    Product2:
+      Product2:
 
-    {
-      productImg: require('../assets/Images/book1.png'),
-      productTitle: 'Carrie Fisher',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book1.png'),
+          productTitle: 'Carrie Fisher',
+          productPrice: '27.12'
+      },
 
-    Product3:
+      Product3:
 
-    {
-      productImg: require('../assets/Images/book3.jpg'),
-      productTitle: 'The Good Sister',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book3.jpg'),
+          productTitle: 'The Good Sister',
+          productPrice: '27.12'
+      },
 
-    Product4:
+      Product4:
 
-    {
-      productImg: require('../assets/Images/book4.jpg'),
-      productTitle: 'The Waiting',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book4.jpg'),
+          productTitle: 'The Waiting',
+          productPrice: '27.12'
+      },
   },
   {
-    image: require('../assets/Images/Author6.png'),
-    designation: 'Novelist',
-    name: 'John A',
-    ratingStars: 4,
-    rating: '(4.0)',
-    about: 'John is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+      image: require('../assets/Images/Author6.png'),
+      designation: 'Novelist',
+      name: 'John A',
+      ratingStars: 5,
+      rating: '(5.0)',
+      about: 'John is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
 
-    Product1:
+      Product1:
 
-    {
-      productImg: require('../assets/Images/book.jpg'),
-      productTitle: 'The da vinci Code',
-      productPrice: '19.99'
-    },
+      {
+          productImg: require('../assets/Images/book.jpg'),
+          productTitle: 'The da vinci Code',
+          productPrice: '19.99'
+      },
 
-    Product2:
+      Product2:
 
-    {
-      productImg: require('../assets/Images/book1.png'),
-      productTitle: 'Carrie Fisher',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book1.png'),
+          productTitle: 'Carrie Fisher',
+          productPrice: '27.12'
+      },
 
-    Product3:
+      Product3:
 
-    {
-      productImg: require('../assets/Images/book3.jpg'),
-      productTitle: 'The Good Sister',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book3.jpg'),
+          productTitle: 'The Good Sister',
+          productPrice: '27.12'
+      },
 
-    Product4:
+      Product4:
 
-    {
-      productImg: require('../assets/Images/book4.jpg'),
-      productTitle: 'The Waiting',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book4.jpg'),
+          productTitle: 'The Waiting',
+          productPrice: '27.12'
+      },
   },
   {
-    image: require('../assets/Images/Author2.png'),
-    designation: 'Novelist',
-    name: 'Smith',
-    ratingStars: 4,
-    rating: '(4.0)',
-    about: 'Smith is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+      image: require('../assets/Images/Author2.png'),
+      designation: 'Novelist',
+      name: 'Smith',
+      ratingStars: 2,
+      rating: '(2.0)',
+      about: 'Smith is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
 
-    Product1:
+      Product1:
 
-    {
-      productImg: require('../assets/Images/book.jpg'),
-      productTitle: 'The da vinci Code',
-      productPrice: '19.99'
-    },
+      {
+          productImg: require('../assets/Images/book.jpg'),
+          productTitle: 'The da vinci Code',
+          productPrice: '19.99'
+      },
 
-    Product2:
+      Product2:
 
-    {
-      productImg: require('../assets/Images/book1.png'),
-      productTitle: 'Carrie Fisher',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book1.png'),
+          productTitle: 'Carrie Fisher',
+          productPrice: '27.12'
+      },
 
-    Product3:
+      Product3:
 
-    {
-      productImg: require('../assets/Images/book3.jpg'),
-      productTitle: 'The Good Sister',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book3.jpg'),
+          productTitle: 'The Good Sister',
+          productPrice: '27.12'
+      },
 
-    Product4:
+      Product4:
 
-    {
-      productImg: require('../assets/Images/book4.jpg'),
-      productTitle: 'The Waiting',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book4.jpg'),
+          productTitle: 'The Waiting',
+          productPrice: '27.12'
+      },
   },
   {
-    image: require('../assets/Images/Author3.png'),
-    designation: 'Novelist',
-    name: 'John Lee',
-    ratingStars: 4,
-    rating: '(4.0)',
-    about: 'Lee is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+      image: require('../assets/Images/Author3.png'),
+      designation: 'Novelist',
+      name: 'John Lee',
+      ratingStars: 1,
+      rating: '(1.0)',
+      about: 'Lee is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
 
-    Product1:
+      Product1:
 
-    {
-      productImg: require('../assets/Images/book.jpg'),
-      productTitle: 'The da vinci Code',
-      productPrice: '19.99'
-    },
+      {
+          productImg: require('../assets/Images/book.jpg'),
+          productTitle: 'The da vinci Code',
+          productPrice: '19.99'
+      },
 
-    Product2:
+      Product2:
 
-    {
-      productImg: require('../assets/Images/book1.png'),
-      productTitle: 'Carrie Fisher',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book1.png'),
+          productTitle: 'Carrie Fisher',
+          productPrice: '27.12'
+      },
 
-    Product3:
+      Product3:
 
-    {
-      productImg: require('../assets/Images/book3.jpg'),
-      productTitle: 'The Good Sister',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book3.jpg'),
+          productTitle: 'The Good Sister',
+          productPrice: '27.12'
+      },
 
-    Product4:
+      Product4:
 
-    {
-      productImg: require('../assets/Images/book4.jpg'),
-      productTitle: 'The Waiting',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book4.jpg'),
+          productTitle: 'The Waiting',
+          productPrice: '27.12'
+      },
   },
   {
-    image: require('../assets/Images/Author3.png'),
-    designation: 'Novelist',
-    name: 'Steve',
-    ratingStars: 4,
-    rating: '(4.0)',
-    about: 'Steve is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
+      image: require('../assets/Images/Author4.png'),
+      designation: 'Writer',
+      name: 'Lucy',
+      ratingStars: 4,
+      rating: '(4.0)',
+      about: 'Steve is born and raised in South bend. She graduated from the University of Notre Dame with bachelor of Arts.',
 
-    Product1:
+      Product1:
 
-    {
-      productImg: require('../assets/Images/book.jpg'),
-      productTitle: 'The da vinci Code',
-      productPrice: '19.99'
-    },
+      {
+          productImg: require('../assets/Images/book.jpg'),
+          productTitle: 'The da vinci Code',
+          productPrice: '19.99'
+      },
 
-    Product2:
+      Product2:
 
-    {
-      productImg: require('../assets/Images/book1.png'),
-      productTitle: 'Carrie Fisher',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book1.png'),
+          productTitle: 'Carrie Fisher',
+          productPrice: '27.12'
+      },
 
-    Product3:
+      Product3:
 
-    {
-      productImg: require('../assets/Images/book3.jpg'),
-      productTitle: 'The Good Sister',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book3.jpg'),
+          productTitle: 'The Good Sister',
+          productPrice: '27.12'
+      },
 
-    Product4:
+      Product4:
 
-    {
-      productImg: require('../assets/Images/book4.jpg'),
-      productTitle: 'The Waiting',
-      productPrice: '27.12'
-    },
+      {
+          productImg: require('../assets/Images/book4.jpg'),
+          productTitle: 'The Waiting',
+          productPrice: '27.12'
+      },
   },
 ]
-
 const Authors = () => {
   const navigation = useNavigation();
 
@@ -342,6 +341,8 @@ const Authors = () => {
 }
 
 const All = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={{ flex: 1 }}>
 
@@ -353,7 +354,7 @@ const All = () => {
           renderItem={({ item, index }) => {
             return (
               <TouchableOpacity style={{ marginHorizontal: 24, marginTop: 10, marginBottom:10}}
-                onPress={() => { }}
+                onPress={() => { navigation.navigate("AuthorInnerPage",{item:item})}}
               >
                 <View style={{ flexDirection: 'row' }}>
                   <View>
