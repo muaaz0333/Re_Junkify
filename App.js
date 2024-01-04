@@ -22,6 +22,12 @@ import Category from './components/Category';
 import CategorySearch from './components/CategorySearch';
 import HomeSearch from './components/HomeSearch';
 import Profile from './components/Profile';
+import Cart from './components/Cart';
+import CartNotification from './components/CartNotification';
+import HomeNotification from './components/HomeNotification';
+import HomeSetLocation from './components/HomeSetLocation';
+import CartConfirmOrder from './components/CartConfirmOrder';
+import HomeSetMap from './components/HomeSetMap';
 // import SplashScreen from 'react-native-splash-screen'
 
 
@@ -40,40 +46,13 @@ const App = () => {
       <Stack.Navigator>
 
 
-      <Stack.Screen
+      {/* <Stack.Screen
           name="Onboard"
           component={Onboard}
           options={{ headerShown: false }}
         >
 
         </Stack.Screen>
-
-      
-        {/* <Stack.Screen
-          name="Onboarding1"
-          component={Onboarding1}
-          options={{ headerShown: false }}
-        >
-
-        </Stack.Screen> */}
-
-
-        {/* <Stack.Screen
-          name="Onboarding2"
-          component={Onboarding2}
-          options={{ headerShown: false }}
-        >
-
-        </Stack.Screen> */}
-
-
-        {/* <Stack.Screen
-          name="Onboarding3"
-          component={Onboarding3}
-          options={{ headerShown: false }}
-        >
-
-        </Stack.Screen> */}
 
         <Stack.Screen
           name="SignIn1"
@@ -181,6 +160,54 @@ const App = () => {
         <Stack.Screen
           name="Profile"
           component={Profile}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="Cart"
+          component={Cart}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="CartNotification"
+          component={CartNotification}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="HomeNotification"
+          component={HomeNotification}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen> */}
+
+        {/* <Stack.Screen
+          name="HomeSetLocation"
+          component={HomeSetLocation}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen> */}
+
+        {/* <Stack.Screen
+          name="CartConfirmOrder"
+          component={CartConfirmOrder}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen> */}
+
+        <Stack.Screen
+          name="HomeSetMap"
+          component={HomeSetMap}
           options={{ headerShown: false }}
         >
 

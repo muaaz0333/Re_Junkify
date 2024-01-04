@@ -8,7 +8,7 @@ const SuccessVerification = () => {
   return (
     <View style={{flex:1,margin: 10, padding: 10 }}>
     <View style={{alignItems:'center', marginHorizontal: 107, marginTop:209 }}>
-      <Image source={require ('../assets/Icons/Group.png')}/>
+      <Image source={require ('../assets/Icons/success.png')}/>
       </View>
 
 <View style={{marginTop:40}}>

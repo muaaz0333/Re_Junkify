@@ -71,7 +71,7 @@ const BottomTab = () => {
 
       <TouchableOpacity onPress={()=>navigation.navigate('Home')}>
         <View style={{ alignItems: 'center' }}>
-          <Image style={{tintColor:handleColorChange("Home")}} source={require("../assets/Icons/Home-Fill.png")} />
+          <Image style={{tintColor:handleColorChange("Home"), width:20, height:20}} source={require("../assets/Icons/home-fill.png")} />
           <Text style={{}}>Home</Text>
         </View>
       </TouchableOpacity>
@@ -84,7 +84,7 @@ const BottomTab = () => {
         </View>
       </TouchableOpacity>
 
-      <TouchableOpacity >
+      <TouchableOpacity onPress={()=>navigation.navigate('Cart')}>
         <View style={{ alignItems: 'center' }}>
           <Image style={{tintColor: handleColorChange("Cart")}} source={require("../assets/Icons/Cart.png")} />
           <Text style={{}}>Cart</Text>
