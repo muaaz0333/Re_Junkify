@@ -28,6 +28,8 @@ import HomeNotification from './components/HomeNotification';
 import HomeSetLocation from './components/HomeSetLocation';
 import CartConfirmOrder from './components/CartConfirmOrder';
 import HomeSetMap from './components/HomeSetMap';
+import OrderStatus from './components/OrderStatus';
+import OrderStatusRating from './components/OrderStatusRating';
 // import SplashScreen from 'react-native-splash-screen'
 
 
@@ -44,9 +46,9 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+{/* 
 
-
-      {/* <Stack.Screen
+      <Stack.Screen
           name="Onboard"
           component={Onboard}
           options={{ headerShown: false }}
@@ -187,17 +189,10 @@ const App = () => {
           options={{ headerShown: false }}
         >
 
-        </Stack.Screen> */}
+        </Stack.Screen>
 
-        {/* <Stack.Screen
-          name="HomeSetLocation"
-          component={HomeSetLocation}
-          options={{ headerShown: false }}
-        >
 
-        </Stack.Screen> */}
-
-        {/* <Stack.Screen
+        <Stack.Screen
           name="CartConfirmOrder"
           component={CartConfirmOrder}
           options={{ headerShown: false }}
@@ -205,9 +200,36 @@ const App = () => {
 
         </Stack.Screen> */}
 
+
+        {/* <Stack.Screen
+          name="HomeSetLocation"
+          component={HomeSetLocation}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+      
+
         <Stack.Screen
           name="HomeSetMap"
           component={HomeSetMap}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen> */}
+
+        <Stack.Screen
+          name="OrderStatus"
+          component={OrderStatus}
+          options={{ headerShown: false }}
+        >
+
+        </Stack.Screen>
+
+        <Stack.Screen
+          name="OrderStatusRating"
+          component={OrderStatusRating}
           options={{ headerShown: false }}
         >
 
