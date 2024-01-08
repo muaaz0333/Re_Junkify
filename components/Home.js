@@ -504,7 +504,7 @@ const Home = () => {
 
 
                 <Text style={{ fontSize: 20, color: 'black', fontWeight: '800' }}>Home</Text>
-                <TouchableOpacity onPress={()=>navigation.navigate("HomeNotification")}>
+                <TouchableOpacity onPress={()=>navigation.navigate("DeliveryNotification")}>
                     <Image source={require("../assets/Icons/Notification.png")} />
                 </TouchableOpacity>
 

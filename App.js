@@ -224,12 +224,12 @@ const App = () => {
         </Stack.Screen> */}
 
 
-        {/* <Stack.Screen
+        <Stack.Screen
           name="DeliveryNotification"
           component={DeliveryNotification}
           options={{ headerShown: false }}
         >
-        </Stack.Screen> */}
+        </Stack.Screen>
 
 
         {/* <Stack.Screen
