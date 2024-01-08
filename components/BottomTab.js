@@ -64,7 +64,7 @@ const BottomTab = () => {
 
   const navigation = useNavigation();
   return (
-    <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly' }}>
+    <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',paddingVertical:3 }}>
 
 
 

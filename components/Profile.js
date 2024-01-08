@@ -1,5 +1,5 @@
 import { View, Text, Image, FlatList, Dimensions, TouchableOpacity, StyleSheet, ScrollView, Modal } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import BottomTab from './BottomTab';
 import { NavigationContainer } from '@react-navigation/native';
@@ -7,6 +7,8 @@ import { useNavigation } from '@react-navigation/native';
 
 const Profile = () => {
   const navigation = useNavigation();
+  const [logout, setLogout] = useState(false);
+
   return (
     <View style={{ flex: 1 }}>
 
@@ -27,7 +29,7 @@ const Profile = () => {
           </View>
         </View>
         <View style={{}}>
-          <TouchableOpacity onPress={() => navigation.navigate("SignIn1")}>
+          <TouchableOpacity onPress={() => { setLogout(!logout) }}>
             <Text style={{ color: '#EF5A56', fontSize: 16, fontWeight: '700' }}>
               Logout
             </Text>
@@ -39,7 +41,7 @@ const Profile = () => {
 
 
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>navigation.navigate("MyAccount")}>
 
         <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 20, justifyContent: 'space-between' }}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -62,7 +64,7 @@ const Profile = () => {
 
 
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>navigation.navigate("HomeSetMap")}>
 
         <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 20, justifyContent: 'space-between' }}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -85,7 +87,7 @@ const Profile = () => {
 
 
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>navigation.navigate("Offers")}>
 
         <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 20, justifyContent: 'space-between' }}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -108,7 +110,7 @@ const Profile = () => {
 
 
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>navigation.navigate("YourFavorites")}>
 
         <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 20, justifyContent: 'space-between' }}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -131,7 +133,7 @@ const Profile = () => {
 
 
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>navigation.navigate("OrderHistory")}>
 
         <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 20, justifyContent: 'space-between' }}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -154,7 +156,7 @@ const Profile = () => {
 
 
 
-      <TouchableOpacity>
+      <TouchableOpacity onPress={()=>navigation.navigate("HelpCenter")}>
 
         <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 20, justifyContent: 'space-between' }}>
           <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -175,6 +177,51 @@ const Profile = () => {
       </TouchableOpacity>
 
 
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={logout}>
+        <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)' }}>
+          <View style={{ flex: 1, backgroundColor: 'white', marginTop: 480, elevation: 10, borderTopLeftRadius: 50, borderTopRightRadius: 50, }}>
+            <View style={{ marginTop: 16, marginHorizontal: 24 }}>
+              <View>
+                <TouchableOpacity onPress={() => setLogout(false)}>
+                  <View style={{ height: 5, width: 56, backgroundColor: 'gray', alignSelf: 'center' }}></View>
+                </TouchableOpacity>
+              </View>
+              <View style={{ marginTop: 16 }}>
+                <Text style={{ fontSize: 19, color: 'black', fontWeight: '700' }}>
+                  Logout
+                </Text>
+              </View>
+
+              <View style={{ marginTop: 16 }}>
+                <View>
+                  <Text style={{ color: 'black', fontSize: 18 }}>
+                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                  </Text>
+                </View>
+                <View style={{ marginTop: 24 }}>
+                  <TouchableOpacity onPress={()=>navigation.navigate("SignIn1")}>
+                    <Text style={styles.btnlogout}>
+                      Logout
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+
+                <View style={{ marginTop: 16 }}>
+                  <TouchableOpacity onPress={()=>setLogout(false)}>
+                    <Text style={styles.btncancel}>
+                      Cancel
+                    </Text>
+                  </TouchableOpacity>
+                </View>
+              </View>
+
+            </View>
+          </View>
+        </View>
+      </Modal>
 
 
 
@@ -187,4 +234,27 @@ const Profile = () => {
 
 export default Profile
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  btnlogout: {
+    backgroundColor: '#54408C',
+    textAlign: 'center',
+    // marginLeft: 24,
+    // marginRight: 24,
+    color: 'white',
+    borderRadius: 35,
+    fontSize: 19,
+    paddingVertical: 12,
+    fontWeight: '600'
+  },
+  btncancel: {
+    backgroundColor: 'white',
+    textAlign: 'center',
+    // marginLeft: 24,
+    // marginRight: 24,
+    color: '#54408C',
+    borderRadius: 35,
+    fontSize: 19,
+    paddingVertical: 12,
+    fontWeight: '600'
+  }
+})

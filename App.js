@@ -30,6 +30,14 @@ import CartConfirmOrder from './components/CartConfirmOrder';
 import HomeSetMap from './components/HomeSetMap';
 import OrderStatus from './components/OrderStatus';
 import OrderStatusRating from './components/OrderStatusRating';
+import DeliveryNotification from './components/DeliveryNotification';
+import NewsPromosNotification from './components/NewsPromosNotification';
+import DetailNewsPromos from './components/DetailNewsPromos';
+import MyAccount from './components/MyAccount';
+import YourFavorites from './components/YourFavorites';
+import OrderHistory from './components/OrderHistory';
+import HelpCenter from './components/HelpCenter';
+import Offers from './components/Offers';
 // import SplashScreen from 'react-native-splash-screen'
 
 
@@ -38,7 +46,7 @@ const Stack = createNativeStackNavigator();
 const App = () => {
   useEffect(() => {
     // setTimeout(()=>{
-      
+
     // }, 2000)
 
     SplashScreen.hide();
@@ -46,158 +54,149 @@ const App = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-{/* 
 
-      <Stack.Screen
+
+        <Stack.Screen
           name="Onboard"
           component={Onboard}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="SignIn1"
           component={SignIn1}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="Signup"
           component={Signup}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="VerificationEmail"
           component={VerificationEmail}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="EnterPhone"
           component={EnterPhone}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="VerificationPhone"
           component={VerificationPhone}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="SuccessVerification"
           component={SuccessVerification}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="Home"
           component={Home}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
+
         <Stack.Screen
           name="Vendors"
           component={Vendors}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="Authors"
           component={Authors}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="AuthorInnerPage"
           component={AuthorInnerPage}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="Category"
           component={Category}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="CategorySearch"
           component={CategorySearch}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="HomeSearch"
           component={HomeSearch}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
 
-        <Stack.Screen
-          name="Profile"
-          component={Profile}
-          options={{ headerShown: false }}
-        >
-
-        </Stack.Screen>
 
         <Stack.Screen
           name="Cart"
           component={Cart}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="CartNotification"
           component={CartNotification}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
 
         <Stack.Screen
           name="HomeNotification"
           component={HomeNotification}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
 
 
-        <Stack.Screen
+        {/* <Stack.Screen
           name="CartConfirmOrder"
           component={CartConfirmOrder}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen> */}
 
 
@@ -206,34 +205,104 @@ const App = () => {
           component={HomeSetLocation}
           options={{ headerShown: false }}
         >
+        </Stack.Screen> */}
 
+
+        {/* <Stack.Screen
+          name="OrderStatus"
+          component={OrderStatus}
+          options={{ headerShown: false }}
+        >
+        </Stack.Screen> */}
+
+
+        {/* <Stack.Screen
+          name="OrderStatusRating"
+          component={OrderStatusRating}
+          options={{ headerShown: false }}
+        >
+        </Stack.Screen> */}
+
+
+        {/* <Stack.Screen
+          name="DeliveryNotification"
+          component={DeliveryNotification}
+          options={{ headerShown: false }}
+        >
+        </Stack.Screen> */}
+
+
+        {/* <Stack.Screen
+          name="NewsPromosNotification"
+          component={NewsPromosNotification}
+          options={{ headerShown: false }}
+        >
+        </Stack.Screen> */}
+
+        {/* <Stack.Screen
+          name="DetailsNewsPromos"
+          component={DetailNewsPromos}
+          options={{ headerShown: false }}
+        >
+        </Stack.Screen> */}
+
+
+        <Stack.Screen
+          name="Profile"
+          component={Profile}
+          options={{ headerShown: false }}
+        >
         </Stack.Screen>
 
-      
+
+        <Stack.Screen
+          name="MyAccount"
+          component={MyAccount}
+          options={{ headerShown: false }}
+        >
+        </Stack.Screen>
+
+
 
         <Stack.Screen
           name="HomeSetMap"
           component={HomeSetMap}
           options={{ headerShown: false }}
         >
-
-        </Stack.Screen> */}
-
-        <Stack.Screen
-          name="OrderStatus"
-          component={OrderStatus}
-          options={{ headerShown: false }}
-        >
-
         </Stack.Screen>
 
+
         <Stack.Screen
-          name="OrderStatusRating"
-          component={OrderStatusRating}
+          name="YourFavorites"
+          component={YourFavorites}
           options={{ headerShown: false }}
         >
-
         </Stack.Screen>
+
+
+        <Stack.Screen
+          name="OrderHistory"
+          component={OrderHistory}
+          options={{ headerShown: false }}
+        >
+        </Stack.Screen>
+
+
+        <Stack.Screen
+          name="HelpCenter"
+          component={HelpCenter}
+          options={{ headerShown: false }}
+        >
+        </Stack.Screen>
+
+
+        <Stack.Screen
+          name="Offers"
+          component={Offers}
+          options={{ headerShown: false }}
+        >
+        </Stack.Screen>
+
       </Stack.Navigator>
     </NavigationContainer>
   )

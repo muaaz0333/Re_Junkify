@@ -29,7 +29,7 @@ const EnterPhone = () => {
                 <Text style={{ color: 'black', fontWeight: '700', fontSize: 15 }}>Phone Number</Text>
                 <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#E5E7E9', borderRadius: 10, marginTop: 6 }}>
                     <Image style={{ marginHorizontal: 12, marginVertical: 12 }} source={require('../assets/Icons/Call.png')} />
-                    <TextInput onChangeText={(text)=>setPhone(text)} inputMode='numeric' placeholder='+92 333 4246144' value={phone} style={{ fontSize: 17, color: 'black', fontWeight: '600' }}/>
+                    <TextInput onChangeText={(text)=>setPhone(text)} inputMode='numeric' placeholder='+92 333 4246144  ' value={phone} style={{ fontSize: 17, color: 'black', fontWeight: '600' }}/>
                 </View>
             </View>
 

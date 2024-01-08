@@ -15,7 +15,7 @@ const HomeSetMap = () => {
 
       {/* home app bar */}
       <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 16, }}>
-        <TouchableOpacity onPress={() => { }}>
+        <TouchableOpacity onPress={() => {navigation.navigate("Profile") }}>
           <Image source={require("../assets/Icons/Arrow_Left.png")} style={{ tintColor: 'black' }} />
         </TouchableOpacity>
 

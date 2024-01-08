@@ -1,0 +1,109 @@
+import { View, Text, Image, FlatList, Dimensions, TouchableOpacity, StyleSheet, ScrollView, Modal, TextInput } from 'react-native'
+import React, { useState } from 'react'
+import { useNavigation } from '@react-navigation/native';
+
+const YourFavorites = () => {
+    const navigation = useNavigation();
+    return (
+        <View style={{ flex: 1, marginHorizontal: 24 }}>
+
+            {/* Appbar */}
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 25 }}>
+                <TouchableOpacity onPress={() => {navigation.navigate("Profile") }}>
+                    <Image source={require("../assets/Icons/Arrow_Left.png")} style={{ tintColor: 'black' }} />
+                </TouchableOpacity>
+                <View style={{ marginRight: 104 }}>
+                    <Text style={{ fontSize: 21, color: 'black', fontWeight: '700' }}>Your Favorites</Text>
+                </View>
+            </View>
+
+
+            <View style={{ marginTop: 16 }}>
+
+                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, paddingVertical: 16, borderColor: 'silver', justifyContent: 'space-between' }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <View>
+                            <Image style={{ width: 68, height: 68, borderRadius: 10 }} source={require('../assets/Images/categoryBook1.png')} />
+                        </View>
+                        <View style={{ marginLeft: 16 }}>
+                            <Text style={{ fontSize: 18, color: 'black', fontWeight: '700' }}>The Da Vinci Code</Text>
+                            <Text style={{ fontSize: 16, color: '#54408C', fontWeight:'700' }}>$19.99</Text>
+                        </View>
+                    </View>
+                    <View style={{}}>
+                        <TouchableOpacity onPress={() => {}}>
+                           <Image style={{width:23, height:23}} source={require('../assets/Icons/favourite.png')}/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+
+
+
+                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, paddingVertical: 16, borderColor: 'silver', justifyContent: 'space-between' }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <View>
+                            <Image style={{ width: 68, height: 68, borderRadius: 10 }} source={require('../assets/Images/categoryBook2.png')} />
+                        </View>
+                        <View style={{ marginLeft: 16 }}>
+                            <Text style={{ fontSize: 18, color: 'black', fontWeight: '700' }}>Carrie Fisher</Text>
+                            <Text style={{ fontSize: 16, color: '#54408C', fontWeight:'700' }}>$27.12</Text>
+                        </View>
+                    </View>
+                    <View style={{}}>
+                        <TouchableOpacity onPress={() => {}}>
+                           <Image style={{width:23, height:23}} source={require('../assets/Icons/favourite.png')}/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+
+
+
+
+                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, paddingVertical: 16, borderColor: 'silver', justifyContent: 'space-between' }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <View>
+                            <Image style={{ width: 68, height: 68, borderRadius: 10 }} source={require('../assets/Images/categoryBook3.png')} />
+                        </View>
+                        <View style={{ marginLeft: 16 }}>
+                            <Text style={{ fontSize: 18, color: 'black', fontWeight: '700' }}>The Good Sister</Text>
+                            <Text style={{ fontSize: 16, color: '#54408C', fontWeight:'700' }}>$13.52</Text>
+                        </View>
+                    </View>
+                    <View style={{}}>
+                        <TouchableOpacity onPress={() => {}}>
+                           <Image style={{width:23, height:23}} source={require('../assets/Icons/favourite.png')}/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+
+
+
+                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, paddingVertical: 16, borderColor: 'silver', justifyContent: 'space-between' }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                        <View>
+                            <Image style={{ width: 68, height: 68, borderRadius: 10 }} source={require('../assets/Images/categoryBook4.png')} />
+                        </View>
+                        <View style={{ marginLeft: 16 }}>
+                            <Text style={{ fontSize: 18, color: 'black', fontWeight: '700' }}>The Waiting</Text>
+                            <Text style={{ fontSize: 16, color: '#54408C', fontWeight:'700' }}>$31.00</Text>
+                        </View>
+                    </View>
+                    <View style={{}}>
+                        <TouchableOpacity onPress={() => {}}>
+                           <Image style={{width:23, height:23}} source={require('../assets/Icons/favourite.png')}/>
+                        </TouchableOpacity>
+                    </View>
+                </View>
+
+
+
+            </View>
+
+
+        </View>
+    )
+}
+
+export default YourFavorites
+
+const styles = StyleSheet.create({})
