@@ -20,21 +20,21 @@ const OrderStatusRating = () => {
             </View>
 
             <View style={{ marginTop: 8 }}>
-                <Text style={{ textAlign: 'center', fontSize: 16 }}>
+                <Text style={{ textAlign: 'center', fontSize: 16 , color:'grey'}}>
                     Order #2930541
                 </Text>
             </View>
 
 
 
-            <View style={{ backgroundColor: '#FAF9FD', marginTop: 30, paddingVertical: 24, paddingVertical: 32, borderRadius: 10 }}>
+            <View style={{ backgroundColor: '#D7DBDD', marginTop: 30, paddingHorizontal: 24, paddingVertical: 32, borderRadius: 10 , elevation:8}}>
                 <View>
                     <Text style={{ textAlign: 'center', fontSize: 21, color: '#54408C', fontWeight: '700' }}>
                         Tell us your feedback <Image source={require('../assets/Icons/hand.png')} />
                     </Text>
                 </View>
                 <View>
-                    <Text style={{ textAlign: 'center', color: '#54408C', fontSize: 17, marginTop: 8 }}>
+                    <Text style={{ textAlign: 'center', color: '#54408C', fontSize: 16, marginTop: 8 }}>
                         Lorem ipsum dolor sit amet consectetur. Dignissim magna vitae
                     </Text>
                 </View>
@@ -43,7 +43,7 @@ const OrderStatusRating = () => {
                     <Image style={{ marginLeft: 8, width: 28, height: 28 }} source={require('../assets/Icons/StarYellow.png')} />
                     <Image style={{ marginLeft: 8, width: 28, height: 28 }} source={require('../assets/Icons/StarYellow.png')} />
                     <Image style={{ marginLeft: 8, width: 28, height: 28 }} source={require('../assets/Icons/StarYellow.png')} />
-                    <Image style={{ marginLeft: 8, tintColor: 'grey', width: 26, height: 26 }} source={require('../assets/Icons/Star.png')} />
+                    <Image style={{ marginLeft: 8, tintColor: 'black', width: 26, height: 26 }} source={require('../assets/Icons/Star.png')} />
                 </View>
 
                 <View style={{marginTop:24}}>

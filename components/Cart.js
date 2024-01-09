@@ -10,7 +10,7 @@ const Cart = () => {
   return (
     <View style={{ flex: 1 }}>
       <View style={{ marginBottom: 24, flexDirection: 'row', alignItems: 'center', marginTop: 16, marginHorizontal: 24, justifyContent: 'flex-end' }}>
-        <Text style={{ fontSize: 20, color: 'black', fontWeight: '800', textAlign: 'center', marginHorizontal: 120 }}>My Cart</Text>
+        <Text style={{ fontSize: 20, color: 'black', fontWeight: '800', textAlign: 'center', marginHorizontal: 90 }}>My Cart</Text>
         <TouchableOpacity style={{ alignItems: 'flex-end' }} onPress={() => navigation.navigate("CartNotification")}>
           <Image style={{ alignSelf: 'flex-end' }} source={require("../assets/Icons/Notification.png")} />
         </TouchableOpacity>

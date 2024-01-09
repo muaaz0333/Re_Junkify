@@ -306,13 +306,13 @@ const Authors = () => {
       </View>
 
       <View style={{ marginTop: 20, marginLeft: 24 }}>
-        <Text style={{ fontSize: 16, }}>
+        <Text style={{ fontSize: 16, color:'grey'}}>
           Check the authors
         </Text>
       </View>
 
       <View style={{ marginLeft: 24, marginBottom: 10 }}>
-        <Text style={{ fontSize: 21, color: '#54408C', fontWeight: '700' }}>
+        <Text style={{ fontSize: 19, color: '#54408C', fontWeight: '700' }}>
           Authors
         </Text>
       </View>
@@ -330,7 +330,7 @@ const Authors = () => {
           },
           // tabBarItemStyle: {width: 140,},
         }}>
-        <Tab.Screen name="All" component={All} options={{ tabBarStyle: { backgroundColor: 'white', }, tabBarItemStyle: { width: 140, }, }} />
+        <Tab.Screen name="All" component={All} options={{ tabBarStyle: {  }, tabBarItemStyle: { }, }} />
         <Tab.Screen name="Poets" component={Poets} />
         <Tab.Screen name="Playwrights" component={Playwrights} />
         <Tab.Screen name="Novelists" component={Novelists} />
@@ -364,7 +364,7 @@ const All = () => {
                     <Text style={{ fontSize: 19, fontWeight: '800', color: 'black' }}>
                       {item.name}
                     </Text>
-                    <Text style={{ fontSize: 16, fontWeight: '500', textAlign:'justify'}} >{item.about}</Text>
+                    <Text style={{ fontSize: 16, fontWeight: '500', textAlign:'justify', color:'grey'}} >{item.about}</Text>
                   </View>
                 </View>
               </TouchableOpacity>

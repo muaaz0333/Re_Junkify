@@ -67,7 +67,7 @@ const HomeSetMap = () => {
                     <Text style={{ fontWeight: '700', color: 'black', fontSize: 16 }}>
                       Utama Street N.20
                     </Text>
-                    <Text style={{ fontSize: 15, fontWeight: '400', }}>
+                    <Text style={{ fontSize: 15, fontWeight: '400',color:'grey' }}>
                       Dumbo Street No.20, Dumbo, New York 10001, United States
                     </Text>
 

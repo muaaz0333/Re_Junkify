@@ -36,7 +36,7 @@ const BottomTab = () => {
 
   const handleColorChange = (tab) => {
       const routeName = navigation?.getState()?.routes[navigation?.getState()?.index]?.name;
-      return routeName === tab ? '#54408C' : 'gray';
+      return routeName === tab ? '#54408C' : 'grey';
   };
 
 
@@ -72,7 +72,7 @@ const BottomTab = () => {
       <TouchableOpacity onPress={()=>navigation.navigate('Home')}>
         <View style={{ alignItems: 'center' }}>
           <Image style={{tintColor:handleColorChange("Home"), width:20, height:20}} source={require("../assets/Icons/home-fill.png")} />
-          <Text style={{}}>Home</Text>
+          <Text style={{color:'grey', marginTop:3}}>Home</Text>
         </View>
       </TouchableOpacity>
 
@@ -80,21 +80,21 @@ const BottomTab = () => {
       <TouchableOpacity onPress={()=>navigation.navigate('Category')}>
         <View style={{ alignItems: 'center' }}>
           <Image style={{tintColor: handleColorChange("Category")}} source={require("../assets/Icons/category.png")} />
-          <Text style={{}}>Category</Text>
+          <Text style={{color:'grey', marginTop:3}}>Category</Text>
         </View>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={()=>navigation.navigate('Cart')}>
         <View style={{ alignItems: 'center' }}>
           <Image style={{tintColor: handleColorChange("Cart")}} source={require("../assets/Icons/Cart.png")} />
-          <Text style={{}}>Cart</Text>
+          <Text style={{color:'grey', marginTop:3}}>Cart</Text>
         </View>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={()=>navigation.navigate('Profile')}>
         <View style={{ alignItems: 'center' }}>
           <Image style={{tintColor:handleColorChange("Profile")}} source={require("../assets/Icons/Profile.png")} />
-          <Text style={{}}>Profile</Text>
+          <Text style={{color:'grey', marginTop:3}}>Profile</Text>
         </View>
       </TouchableOpacity>
 

@@ -26,6 +26,7 @@ const MyAccount = () => {
     }
 
     return (
+        <ScrollView>
         <View style={{ flex: 1, marginHorizontal: 24 }}>
 
             {/* Appbar */}
@@ -33,7 +34,7 @@ const MyAccount = () => {
                 <TouchableOpacity onPress={() => {navigation.navigate("Profile") }}>
                     <Image source={require("../assets/Icons/Arrow_Left.png")} style={{ tintColor: 'black' }} />
                 </TouchableOpacity>
-                <View style={{ marginRight: 120 }}>
+                <View style={{ marginHorizontal:87 }}>
                     <Text style={{ fontSize: 21, color: 'black', fontWeight: '700' }}>My Account</Text>
                 </View>
             </View>
@@ -98,7 +99,7 @@ const MyAccount = () => {
                 <TextInput
                     placeholder='anna@gmail.com'
                     placeholderTextColor={'black'}
-                    style={{ color: '#B8B8B8', borderRadius: 10, marginTop: 6, backgroundColor: '#E5E7E9', paddingVertical: 12, paddingHorizontal: 16, borderWidth: 1, borderColor: 'silver', fontSize: 16, fontWeight: '500' }}
+                    style={{ color: 'black', borderRadius: 10, marginTop: 6, backgroundColor: '#E5E7E9', paddingVertical: 12, paddingHorizontal: 16, borderWidth: 1, borderColor: 'silver', fontSize: 16, fontWeight: '500' }}
                 />
             </View>
 
@@ -137,12 +138,13 @@ const MyAccount = () => {
 
 
 
-            <View style={{ marginTop: 40 }}>
+            <View style={{ marginTop: 25 }}>
                 <TouchableOpacity onPress={() => { }}><Text style={styles.btncontinue} >Save Changes</Text></TouchableOpacity>
             </View>
 
 
         </View>
+        </ScrollView>
     )
 }
 
@@ -158,6 +160,7 @@ const styles = StyleSheet.create({
         borderRadius: 35,
         fontSize: 19,
         paddingVertical: 12,
-        fontWeight: '600'
+        fontWeight: '600',
+        marginBottom:28
     },
 })

@@ -104,7 +104,7 @@ const Category = () => {
           },
           // tabBarItemStyle: {width: 140,},
         }}>
-        <Tab.Screen name="All" component={All} options={{ tabBarStyle: { backgroundColor: 'white', }, tabBarItemStyle: { width: 140, }, }} />
+        <Tab.Screen name="All" component={All} options={{ tabBarStyle: {  }, tabBarItemStyle: { }, }} />
         <Tab.Screen name="Novels" component={Novels} />
         <Tab.Screen name="Self Love" component={SelfLove} />
         <Tab.Screen name="Science" component={Science} />
@@ -123,9 +123,9 @@ const Category = () => {
 
 const All = () => {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1 , marginHorizontal:24}}>
 
-      <View style={{ marginTop: 0, marginBottom:70 }}>
+      <View style={{ marginTop: 0, marginBottom:70,  alignItems:'center'}}>
         <FlatList
           data={categoryBooks}
           showsHorizontalScrollIndicator={false}
@@ -134,10 +134,10 @@ const All = () => {
           numColumns={2}
           renderItem={({ item, index }) => {
             return (
-              <View style={{ marginLeft: 0, marginTop: 0 }}>
-                <View style={{ marginLeft: 24, marginTop: 40 }}>
+              // <View style={{ marginLeft: 0, marginTop: 0 }}>
+                <View style={{ marginRight: 9, marginTop: 40,}}>
                   <View>
-                    <Image style={{ width: 165, height: 175, resizeMode: 'contain', borderRadius: 10 }} source={item.pic} />
+                    <Image style={{ width: 150, height: 160, resizeMode: 'contain', borderRadius: 10 }} source={item.pic} />
                   </View>
                   <View>
                     <Text style={{ color: 'black', fontSize: 17, fontWeight: '700', marginTop:8 }}>
@@ -150,7 +150,7 @@ const All = () => {
                     </Text>
                   </View>
                 </View>
-              </View>
+              // </View> 
             )
           }}
         />

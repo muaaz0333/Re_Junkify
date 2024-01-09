@@ -7,22 +7,22 @@ const { height, width } = Dimensions.get('window')
 const DetailNewsPromos = () => {
     const navigation = useNavigation();
     return (
-        <View style={{ flex: 1, marginHorizontal: 24 }}>
+        <View style={{ flex: 1 }}>
 
             {/* Appbar */}
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 25 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 25 , marginHorizontal: 24}}>
                 <TouchableOpacity onPress={() => { }}>
                     <Image source={require("../assets/Icons/Arrow_Left.png")} style={{ tintColor: 'black' }} />
                 </TouchableOpacity>
-                <View style={{ marginRight: 130 }}>
+                <View style={{ marginHorizontal: 88 }}>
                     <Text style={{ fontSize: 21, color: 'black', fontWeight: '700' }}>Promotion</Text>
                 </View>
             </View>
 
             {/* UI */}
-            <View style={{ padding: 15, width: width / 1.1, backgroundColor: '#FAF9FD', elevation: 5, borderRadius: 8, flexDirection: 'row', marginTop: 19, alignItems: 'center', justifyContent: 'space-between', }}>
+            <View style={{ padding: 15, width: width / 1.1, backgroundColor: '#FAF9FD', elevation: 5, borderRadius: 8, flexDirection: 'row', marginTop: 19, alignItems: 'center', justifyContent: 'space-between', marginHorizontal: 17 }}>
                 <View style={{ flex: 1, }}>
-                    <Text style={{ fontSize: 22, color: '#54408C', fontWeight: 'bold', paddingLeft: 23 }}>50% Discount On All Desert</Text>
+                    <Text style={{ fontSize: 22, color: '#54408C', fontWeight: 'bold', paddingLeft: 23, }}>50% Discount On All Desert</Text>
                     <Text style={{ fontSize: 18, color: '#54408C', paddingLeft: 23, fontWeight: '500' }}>Grab itu now!</Text>
                     <TouchableOpacity style={{ paddingLeft: 23, alignSelf: 'flex-start', marginTop: 14, }}>
                         <Text style={[styles.btnordernow, { alignItems: 'center' }]}>Order Now</Text>
@@ -36,29 +36,29 @@ const DetailNewsPromos = () => {
             </View>
 
             {/* Texts */}
-            <View style={{ marginTop: 25 }}>
+            <View style={{ marginTop: 25 , marginHorizontal: 20}}>
                 <View>
-                    <Text style={{ color: 'black', fontWeight: 'bold', fontSize: 20 }}>
+                    <Text style={{ color: 'black', fontWeight: 'bold', fontSize: 19 }}>
                         Today 50% discount on all products in Chapter with online orders
                     </Text>
 
                 </View>
 
                 <View style={{ marginTop: 16 }}>
-                    <Text style={{ fontSize: 15, fontWeight: '400' }}>
+                    <Text style={{ fontSize: 15, fontWeight: '400', color:'grey' }}>
                         Excuse me... Who could ever resist a discount feast?
                     </Text>
                     <Image style={{ width: 25, height: 25 }} source={require('../assets/Icons/eyes.png')} />
                 </View>
 
                 <View style={{ marginTop: 16 }}>
-                    <Text style={{ fontSize: 15, fontWeight: '400' }}>
+                    <Text style={{ fontSize: 15, fontWeight: '400' , color:'grey'}}>
                         Hear me out . Today, October 21, 2021, Chapter has a 50% discount for any product. What are you waiting for, let's order now before it runs out.
                     </Text>
                 </View>
 
                 <View style={{ marginTop: 16 }}>
-                    <Text style={{ fontSize: 15, fontWeight: '400' }}>
+                    <Text style={{ fontSize: 15, fontWeight: '400' , color:'grey'}}>
                         All of the products are discounted, just order through
                         the Chapter app to enjoy this discount. From the
                         best to the best we have prepared for you, may you
@@ -68,7 +68,7 @@ const DetailNewsPromos = () => {
                 </View>
 
                 <View style={{ marginTop: 16 }}>
-                    <Text style={{ fontSize: 15, fontWeight: '400' }}>
+                    <Text style={{ fontSize: 15, fontWeight: '400', color:'grey' }}>
                         So, what's your call? Let's roll, order your comfort food now 😉
                     </Text>
                 </View>

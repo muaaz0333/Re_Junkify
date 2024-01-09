@@ -32,12 +32,13 @@ import OrderStatus from './components/OrderStatus';
 import OrderStatusRating from './components/OrderStatusRating';
 import DeliveryNotification from './components/DeliveryNotification';
 import NewsPromosNotification from './components/NewsPromosNotification';
-import DetailNewsPromos from './components/DetailNewsPromos';
+
 import MyAccount from './components/MyAccount';
 import YourFavorites from './components/YourFavorites';
 import OrderHistory from './components/OrderHistory';
 import HelpCenter from './components/HelpCenter';
 import Offers from './components/Offers';
+import DetailNewsPromos from './components/DetailNewsPromos';
 // import SplashScreen from 'react-native-splash-screen'
 
 
@@ -45,15 +46,16 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   useEffect(() => {
-    // setTimeout(()=>{
+    setTimeout(()=>{
 
-    // }, 2000)
+    }, 2000)
 
     SplashScreen.hide();
   }, []);
   return (
     <NavigationContainer>
       <Stack.Navigator>
+      
 
 
         <Stack.Screen
@@ -192,36 +194,36 @@ const App = () => {
         </Stack.Screen>
 
 
-        {/* <Stack.Screen
+        <Stack.Screen
           name="CartConfirmOrder"
           component={CartConfirmOrder}
           options={{ headerShown: false }}
         >
-        </Stack.Screen> */}
+        </Stack.Screen>
 
 
-        {/* <Stack.Screen
+        <Stack.Screen
           name="HomeSetLocation"
           component={HomeSetLocation}
           options={{ headerShown: false }}
         >
-        </Stack.Screen> */}
+        </Stack.Screen>
 
 
-        {/* <Stack.Screen
+        <Stack.Screen
           name="OrderStatus"
           component={OrderStatus}
           options={{ headerShown: false }}
         >
-        </Stack.Screen> */}
+        </Stack.Screen>
 
 
-        {/* <Stack.Screen
+        <Stack.Screen
           name="OrderStatusRating"
           component={OrderStatusRating}
           options={{ headerShown: false }}
         >
-        </Stack.Screen> */}
+        </Stack.Screen>
 
 
         <Stack.Screen
@@ -232,19 +234,20 @@ const App = () => {
         </Stack.Screen>
 
 
-        {/* <Stack.Screen
+        <Stack.Screen
           name="NewsPromosNotification"
           component={NewsPromosNotification}
           options={{ headerShown: false }}
         >
-        </Stack.Screen> */}
+        </Stack.Screen>
 
-        {/* <Stack.Screen
-          name="DetailsNewsPromos"
+
+        <Stack.Screen
+          name="DetailNewsPromos"
           component={DetailNewsPromos}
           options={{ headerShown: false }}
         >
-        </Stack.Screen> */}
+        </Stack.Screen>
 
 
         <Stack.Screen
@@ -261,7 +264,6 @@ const App = () => {
           options={{ headerShown: false }}
         >
         </Stack.Screen>
-
 
 
         <Stack.Screen

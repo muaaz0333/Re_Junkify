@@ -11,7 +11,7 @@ const OrderStatus = () => {
     return (
         <View style={{ flex: 1, marginHorizontal: 24 }}>
 
-            <View style={{ backgroundColor: '#FAF9FD', marginTop: 30, paddingVertical: 24, paddingVertical: 32, borderRadius: 10 }}>
+            <View style={{ backgroundColor: '#D7DBDD', marginTop: 30, paddingVertical: 24, paddingVertical: 32, borderRadius: 10, elevation:8 }}>
                 <View>
                     <Text style={{ textAlign: 'center', fontSize: 18, color: 'black' }}>
                         Thankyou <Image source={require('../assets/Icons/hand.png')} />
@@ -32,7 +32,7 @@ const OrderStatus = () => {
 
 
             <View style={{ flexDirection: 'row', marginTop: 16, alignSelf: 'center', alignItems: 'center' }}>
-                <Text style={{ fontSize: 14, fontWeight: '400' }} >
+                <Text style={{ fontSize: 14, fontWeight: '400' , color:'grey'}} >
                     Do you want to cancel your order?
                 </Text>
                 <Text style={{ marginLeft: 5, fontSize: 15, color: '#54408C', fontWeight: '700' }}>
@@ -157,7 +157,7 @@ const OrderStatus = () => {
 
 
             {/* Button */}
-            <View style={{ marginTop: 78 }}>
+            <View style={{ marginTop: 35 }}>
                 <TouchableOpacity onPress={() => { navigation.navigate("OrderStatusRating")}}>
                     <Text style={styles.order}>
                         Order Status
@@ -180,6 +180,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FAF9FD',
         paddingVertical: 12,
         borderRadius: 30,
-        fontWeight: '600'
+        fontWeight: '600',
+        elevation:8
     }
 })

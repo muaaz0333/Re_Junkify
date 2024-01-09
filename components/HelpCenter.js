@@ -12,7 +12,7 @@ const HelpCenter = () => {
                 <TouchableOpacity onPress={() => { navigation.navigate("Profile") }}>
                     <Image source={require("../assets/Icons/Arrow_Left.png")} style={{ tintColor: 'black' }} />
                 </TouchableOpacity>
-                <View style={{ marginRight: 110 }}>
+                <View style={{ marginHorizontal: 80 }}>
                     <Text style={{ fontSize: 21, color: 'black', fontWeight: '700' }}>Order History</Text>
                 </View>
             </View>
@@ -23,10 +23,10 @@ const HelpCenter = () => {
                     Help Center
                 </Text>
                 <View style={{ marginTop: 8 }}>
-                    <Text style={{ textAlign: 'center', fontSize: 17, fontWeight: '600' }}>
+                    <Text style={{ textAlign: 'center', fontSize: 17, fontWeight: '600', color:'grey', marginHorizontal:24 }}>
                         Tell us how we can help <Image source={require('../assets/Icons/hand.png')} />
                     </Text>
-                    <Text style={{ textAlign: 'center', fontSize: 17, fontWeight: '600' }}>
+                    <Text style={{ textAlign: 'center', fontSize: 17, fontWeight: '600', color:'grey', marginHorizontal:24 }}>
                         Chapter are standing by for service & support!
                     </Text>
                 </View>
@@ -34,9 +34,9 @@ const HelpCenter = () => {
 
 
 
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', marginTop: 35, marginHorizontal: 24 }}>
+            <View style={{ flexDirection: 'row',  marginTop: 40, justifyContent:'space-between',marginHorizontal:15 }}>
 
-                <View style={{ backgroundColor: '#D0D3D4', width: 170, height: 180, borderRadius: 10, justifyContent: 'center', paddingLeft: 10 }}>
+                <View style={{ backgroundColor: '#D7DBDD', width: 160, height: 170, borderRadius: 10, justifyContent: 'center', paddingLeft: 10 }}>
                     <View style={{ width: 50, height: 50, backgroundColor: 'white', alignItems: 'center', justifyContent: 'center', borderRadius: 40 }}>
                         <Image source={require('../assets/Icons/Email-Bulk.png')} />
                     </View>
@@ -44,7 +44,7 @@ const HelpCenter = () => {
                         <Text style={{ fontSize: 17, color: 'black', fontWeight: '700' }}>
                             Email
                         </Text>
-                        <Text style={{ fontSize: 16 }}>
+                        <Text style={{ fontSize: 16 , color:'grey'}}>
                             Send to your email
                         </Text>
                     </View>
@@ -52,7 +52,7 @@ const HelpCenter = () => {
 
 
                 </View>
-                <View style={{ backgroundColor: '#D0D3D4', width: 170, height: 180, borderRadius: 10, justifyContent: 'center', paddingLeft: 10 }}>
+                <View style={{ backgroundColor: '#D7DBDD', width: 160, height: 170, borderRadius: 10, justifyContent: 'center', paddingLeft: 10 }}>
                     <View style={{ width: 50, height: 50, backgroundColor: 'white', alignItems: 'center', justifyContent: 'center', borderRadius: 40 }}>
                         <Image source={require('../assets/Icons/CallFill.png')} />
                     </View>
@@ -61,7 +61,7 @@ const HelpCenter = () => {
                         <Text style={{ fontSize: 17, color: 'black', fontWeight: '700' }}>
                             Phone Number
                         </Text>
-                        <Text style={{ fontSize: 16 }}>
+                        <Text style={{ fontSize: 16, color:'grey'}}>
                             Send to your phone
                         </Text>
                     </View>

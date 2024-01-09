@@ -133,12 +133,12 @@ const Slide = ({ item }) => {
             </View>
             {/* <View style={{backgroundColor:'red', alignItems:'center', justifyContent:'space-between'}}> */}
             <Image
-                style={{ height: '59%', width, resizeMode: 'contain' }}
+                style={{ height: '55%', width, resizeMode: 'contain' }}
                 source={item.image}
             />
             <View style={{ width: 300, alignSelf: 'center' }}>
                 <Text style={{ fontSize: 24, fontWeight: "bold", color: "black", textAlign: "center", marginTop: 3, }}>{item.title}</Text>
-                <Text style={{ textAlign: 'center', marginTop: 12 }}>{item.subtitle}</Text>
+                <Text style={{ textAlign: 'center', marginTop: 12, color:"grey" }}>{item.subtitle}</Text>
             </View>
 
             {/* </View> */}
@@ -165,23 +165,25 @@ const styles = StyleSheet.create({
     btncontinue: {
         backgroundColor: '#54408C',
         textAlign: 'center',
-        marginLeft: 24,
-        marginRight: 24,
+        marginHorizontal:24,
+        // marginLeft: 24,
+        // marginRight: 24,
         color: 'white',
         borderRadius: 14,
         fontSize: 18,
         paddingVertical: 15,
-        paddingHorizontal:125
+        paddingHorizontal:100
     },
     btnstarted:{
         backgroundColor: '#54408C',
         textAlign: 'center',
-        marginLeft: 24,
-        marginRight: 24,
+        // marginLeft: 24,
+        // marginRight: 24,
         color: 'white',
         borderRadius: 14,
         fontSize: 18,
         paddingVertical: 15,
-        paddingHorizontal:115
+        marginHorizontal:24,
+        paddingHorizontal:90
     }
 })

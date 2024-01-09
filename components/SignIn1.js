@@ -8,7 +8,7 @@ const SignIn1 = () => {
   const navigation = useNavigation();
   const [isSecureEntry, setIsSecureEntry] = useState(true)
 
-  const OnLoginHandler=()=>{
+  const OnLoginHandler = () => {
 
     navigation.navigate("Home")
   }
@@ -27,7 +27,7 @@ const SignIn1 = () => {
         </Text>
       </View>
       <View>
-        <Text style={{ marginTop: 8, lineHeight: 24, fontSize: 15 }}>Sign to your account</Text>
+        <Text style={{ marginTop: 8, lineHeight: 24, fontSize: 15, color: 'grey' }}>Sign to your account</Text>
       </View>
 
       <View>
@@ -39,7 +39,8 @@ const SignIn1 = () => {
       <View>
         <TextInput
           placeholder='Your Email'
-          style={{ color: '#B8B8B8', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+          placeholderTextColor={"grey"}
+          style={{ color: 'grey', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
         />
       </View>
 
@@ -52,6 +53,7 @@ const SignIn1 = () => {
       <View style={{ flexDirection: 'row', alignItems: 'center', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 3, paddingHorizontal: 16 }}>
         <TextInput
           placeholder='Your Password'
+          placeholderTextColor={"grey"}
           secureTextEntry={isSecureEntry}
           style={{ flex: 1, color: '#B8B8B8', }}
 
@@ -67,26 +69,26 @@ const SignIn1 = () => {
         <Text style={{ marginTop: 16, color: '#54408C', fontWeight: 'bold', fontSize: 15 }}>Forgot Password?</Text>
       </View>
 
-      <View style={{ marginTop: 24 }}>
-        <TouchableOpacity onPress={() => {OnLoginHandler()}}><Text style={styles.btncontinue} >Login</Text></TouchableOpacity>
+      <View style={{ marginTop: 22 }}>
+        <TouchableOpacity onPress={() => { OnLoginHandler() }}><Text style={styles.btncontinue} >Login</Text></TouchableOpacity>
       </View>
 
-      <View style={{ marginTop: 24 }}>
+      <View style={{ marginTop: 22 }}>
         <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
-          <Text style={{ color: '#A6A6A6', fontSize: 15 }}>Don't have an account?</Text>
+          <Text style={{ color: 'grey', fontSize: 15 }}>Don't have an account?</Text>
           <Text style={{ color: '#54408C', fontSize: 15, fontWeight: 'bold' }} onPress={() => navigation.navigate('Signup')}> Sign Up</Text>
         </View>
       </View>
 
 
-      <View style={{ flexDirection: 'row', marginTop: 26, alignItems: 'center' }}>
-        <View style={{ borderBottomWidth: .5, borderBottomColor: '#A6A6A6', flex: 1 }}></View>
-        <Text style={{ paddingVertical: 10, paddingHorizontal: 7, color: '#A6A6A6', fontSize: 15 }}>Or with</Text>
-        <View style={{ borderBottomWidth: .5, borderBottomColor: '#A6A6A6', flex: 1 }}></View>
+      <View style={{ flexDirection: 'row', marginTop: 22, alignItems: 'center' }}>
+        <View style={{ borderBottomWidth: .5, borderBottomColor: 'grey', flex: 1 }}></View>
+        <Text style={{ paddingVertical: 10, paddingHorizontal: 7, color: 'grey', fontSize: 15 }}>Or with</Text>
+        <View style={{ borderBottomWidth: .5, borderBottomColor: 'grey', flex: 1 }}></View>
       </View>
 
 
-      <View style={{ marginTop: 24 }}>
+      <View style={{ marginTop: 22 }}>
         <TouchableOpacity onPress={() => { }}><Text style={styles.btngoogle} ><Image source={require('../assets/Icons/Google.png')} /><Text>    Sign in with Google</Text></Text></TouchableOpacity>
       </View>
 
@@ -122,7 +124,7 @@ const styles = StyleSheet.create({
     borderRadius: 40,
     fontSize: 16,
     paddingVertical: 12,
-    paddingHorizontal: 85,
+    paddingHorizontal: 5,
     borderWidth: 2.5
   }
 })

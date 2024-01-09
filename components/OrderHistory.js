@@ -12,13 +12,13 @@ const OrderHistory = () => {
                 <TouchableOpacity onPress={() => {navigation.navigate("Profile") }}>
                     <Image source={require("../assets/Icons/Arrow_Left.png")} style={{ tintColor: 'black' }} />
                 </TouchableOpacity>
-                <View style={{ marginRight: 110 }}>
+                <View style={{ marginHorizontal: 80 }}>
                     <Text style={{ fontSize: 21, color: 'black', fontWeight: '700' }}>Order History</Text>
                 </View>
             </View>
 
             {/* October 2021 */}
-            <View style={{ marginTop: 24 }}>
+            <View style={{ marginTop: 26 }}>
                 <View>
                     <Text style={{ fontSize: 18, color: 'black', fontWeight: '700' }}>
                         October 2021
@@ -39,7 +39,7 @@ const OrderHistory = () => {
                                         Delivered
                                     </Text>
                                     <View style={{ width: 7, height: 7, backgroundColor: 'silver', borderRadius: 10, marginHorizontal: 8 }}></View>
-                                    <Text style={{ fontWeight: '600' }}>
+                                    <Text style={{ fontWeight: '600', color:'grey' }}>
                                         1 items
                                     </Text>
                                 </View>
@@ -63,7 +63,7 @@ const OrderHistory = () => {
                                         Delivered
                                     </Text>
                                     <View style={{ width: 7, height: 7, backgroundColor: 'silver', borderRadius: 10, marginHorizontal: 8 }}></View>
-                                    <Text style={{ fontWeight: '600' }}>
+                                    <Text style={{ fontWeight: '600', color:'grey' }}>
                                         5 items
                                     </Text>
                                 </View>
@@ -87,7 +87,7 @@ const OrderHistory = () => {
                                         Cancelled
                                     </Text>
                                     <View style={{ width: 7, height: 7, backgroundColor: 'silver', borderRadius: 10, marginHorizontal: 8 }}></View>
-                                    <Text style={{ fontWeight: '600' }}>
+                                    <Text style={{ fontWeight: '600' , color:'grey'}}>
                                         2 items
                                     </Text>
                                 </View>

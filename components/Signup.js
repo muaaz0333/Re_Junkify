@@ -61,7 +61,7 @@ const Signup = () => {
                 </Text>
             </View>
             <View>
-                <Text style={{ marginTop: 8, lineHeight: 24, fontSize: 15 }}>Create account and choose favorite menu</Text>
+                <Text style={{ marginTop: 8, lineHeight: 24, fontSize: 15 , color:'grey'}}>Create account and choose favorite menu</Text>
             </View>
 
             <View>
@@ -72,6 +72,7 @@ const Signup = () => {
             <View>
                 <TextInput
                     placeholder='Your Name'
+                    placeholderTextColor={"grey"}
                     style={{ color: '#B8B8B8', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                 />
             </View>
@@ -85,6 +86,7 @@ const Signup = () => {
             <View>
                 <TextInput
                     placeholder='Your Email'
+                    placeholderTextColor={"grey"}
                     style={{ color: '#B8B8B8', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                 />
             </View>
@@ -98,6 +100,7 @@ const Signup = () => {
             <View style={{ flexDirection: 'row', alignItems: 'center', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 3, paddingHorizontal: 16 }}>
                 <TextInput
                     placeholder='Your Password'
+                    placeholderTextColor={"grey"}
                     secureTextEntry={isSecureEntry}
                     style={{ flex: 1, color: '#B8B8B8', }}
                     onChangeText={(text) => {
@@ -140,22 +143,22 @@ const Signup = () => {
             </View>
 
 
-            <View style={{ marginTop: 24 }}>
+            <View style={{ marginTop: 15 }}>
                 <TouchableOpacity onPress={() =>{navigation.navigate("VerificationEmail")}}><Text style={styles.btncontinue} >Register</Text></TouchableOpacity>
             </View>
 
-            <View style={{ marginTop: 24 }}>
+            <View style={{ marginTop: 22 }}>
                 <View style={{ flexDirection: 'row', alignSelf: 'center' }}>
-                    <Text style={{ color: '#A6A6A6', fontSize: 16, fontWeight: '600' }}>Have an account?</Text>
-                    <Text style={{ color: '#54408C', fontSize: 16, fontWeight: '700' }} onPress={() => navigation.navigate('SignIn1')}> Sign In</Text>
+                    <Text style={{ color: 'grey', fontSize: 15, fontWeight: '600' }}>Have an account?</Text>
+                    <Text style={{ color: '#54408C', fontSize: 15, fontWeight: '700' }} onPress={() => navigation.navigate('SignIn1')}> Sign In</Text>
                 </View>
             </View>
 
-            <View style={{ marginTop: 88 }}>
-                <Text style={{ textAlign: 'center', color: '#A6A6A6', fontSize: 15, fontWeight: '500' }}>
+            <View style={{ marginTop: 55 }}>
+                <Text style={{ textAlign: 'center', color: 'grey', fontSize: 14, fontWeight: '500' }}>
                     By clicking Register, you agree to our
                 </Text>
-                <Text style={{ textAlign: 'center', color: '#54408C', fontSize: 16, fontWeight: '600' }}>
+                <Text style={{ textAlign: 'center', color: '#54408C', fontSize: 15, fontWeight: '600' }}>
                     Terms and Data Policy
                 </Text>
             </View>

@@ -10,10 +10,10 @@ const DeliveryNotification = () => {
 
             {/* Appbar */}
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 25 }}>
-                <TouchableOpacity onPress={() => { navigation.navigate("Home")}}>
+                <TouchableOpacity onPress={() => { navigation.navigate("Home") }}>
                     <Image source={require("../assets/Icons/Arrow_Left.png")} style={{ tintColor: 'black' }} />
                 </TouchableOpacity>
-                <View style={{ marginRight: 125 }}>
+                <View style={{ marginRight: 95 }}>
                     <Text style={{ fontSize: 20, color: 'black', fontWeight: '700' }}>Notification</Text>
                 </View>
             </View>
@@ -25,7 +25,8 @@ const DeliveryNotification = () => {
                         Current
                     </Text>
                 </View>
-                <View style={{ borderWidth: 1, borderColor: 'silver', marginTop: 16, borderRadius: 20, paddingVertical:18,paddingHorizontal:16, flexDirection: 'row' }}>
+                <TouchableOpacity onPress={()=>navigation.navigate("NewsPromosNotification")}>
+                <View style={{ borderWidth: 1, borderColor: 'silver', marginTop: 16, borderRadius: 20, paddingVertical: 18, paddingHorizontal: 16, flexDirection: 'row' }}>
                     <View>
                         <Image style={{ width: 50, height: 50, borderRadius: 12 }} source={require('../assets/Images/categoryBook1.png')} />
                     </View>
@@ -38,13 +39,14 @@ const DeliveryNotification = () => {
                                 On the way
                             </Text>
                             <View style={{ width: 7, height: 7, backgroundColor: 'silver', borderRadius: 10, marginHorizontal: 8 }}></View>
-                            <Text style={{ fontWeight: '600' }}>
+                            <Text style={{ fontWeight: '600' , color:'grey'}}>
                                 1 items
                             </Text>
                         </View>
 
                     </View>
                 </View>
+                </TouchableOpacity>
             </View>
 
 
@@ -113,7 +115,7 @@ const DeliveryNotification = () => {
                 </View>
                 <View style={{ borderWidth: 1, padding: 16, borderRadius: 12, borderColor: 'silver', marginTop: 16 }}>
 
-                    <View style={{ flexDirection: 'row' ,paddingVertical:10}}>
+                    <View style={{ flexDirection: 'row', paddingVertical: 10 }}>
                         <View>
                             <Image style={{ width: 50, height: 50, borderRadius: 12 }} source={require('../assets/Images/book1.png')} />
                         </View>
@@ -126,7 +128,7 @@ const DeliveryNotification = () => {
                                     Delivered
                                 </Text>
                                 <View style={{ width: 7, height: 7, backgroundColor: 'silver', borderRadius: 10, marginHorizontal: 8 }}></View>
-                                <Text style={{ fontWeight: '600' }}>
+                                <Text style={{ fontWeight: '600', color:'grey' }}>
                                     1 items
                                 </Text>
                             </View>
@@ -135,7 +137,7 @@ const DeliveryNotification = () => {
 
                     <View style={{ height: 1, width: 345, backgroundColor: 'silver', marginVertical: 16 }}></View>
 
-                    <View style={{ flexDirection: 'row' ,paddingVertical:10}}>
+                    <View style={{ flexDirection: 'row', paddingVertical: 10 }}>
                         <View>
                             <Image style={{ width: 50, height: 50, borderRadius: 12 }} source={require('../assets/Images/categoryBook4.png')} />
                         </View>
@@ -148,7 +150,7 @@ const DeliveryNotification = () => {
                                     Delivered
                                 </Text>
                                 <View style={{ width: 7, height: 7, backgroundColor: 'silver', borderRadius: 10, marginHorizontal: 8 }}></View>
-                                <Text style={{ fontWeight: '600' }}>
+                                <Text style={{ fontWeight: '600', color:'grey' }}>
                                     5 items
                                 </Text>
                             </View>
@@ -157,7 +159,7 @@ const DeliveryNotification = () => {
 
                     <View style={{ height: 1, width: 345, backgroundColor: 'silver', marginVertical: 16 }}></View>
 
-                    <View style={{ flexDirection: 'row' ,paddingVertical:10}}>
+                    <View style={{ flexDirection: 'row', paddingVertical: 10 }}>
                         <View>
                             <Image style={{ width: 50, height: 50, borderRadius: 12 }} source={require('../assets/Images/categoryBook6.png')} />
                         </View>
@@ -170,7 +172,7 @@ const DeliveryNotification = () => {
                                     Cancelled
                                 </Text>
                                 <View style={{ width: 7, height: 7, backgroundColor: 'silver', borderRadius: 10, marginHorizontal: 8 }}></View>
-                                <Text style={{ fontWeight: '600' }}>
+                                <Text style={{ fontWeight: '600' , color:'grey'}}>
                                     2 items
                                 </Text>
                             </View>

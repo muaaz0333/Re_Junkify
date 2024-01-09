@@ -12,15 +12,15 @@ const CategorySearch = () => {
                 <TouchableOpacity onPress={() => navigation.navigate("Category")}>
                     <Image source={require("../assets/Icons/Arrow_Left.png")} style={{ tintColor: 'black' }} />
                 </TouchableOpacity>
-                <View style={{ marginRight: 147 }}>
+                <View style={{ marginHorizontal: 110 }}>
                     <Text style={{ fontSize: 20, color: 'black', fontWeight: '700' }}>Search</Text>
                 </View>
             </View>
 
             <View style={{marginTop:23, marginHorizontal:24}}>
             <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#E5E7E9', borderRadius: 10, marginTop: 6 }}>
-                    <Image style={{ marginHorizontal: 12, marginVertical: 12 , tintColor:'grey', width:28, height:28}} source={require('../assets/Icons/Search.png')} />
-                    <TextInput onChangeText={(text)=>setPhone(text)} placeholder='Search'  style={{ fontSize: 17, color: 'black', fontWeight: '600' }}/>
+                    <Image style={{ marginHorizontal: 12, marginVertical: 12 , tintColor:'black', width:28, height:28}} source={require('../assets/Icons/Search.png')} />
+                    <TextInput onChangeText={(text)=>setPhone(text)} placeholder='Search' placeholderTextColor={"black"} style={{ fontSize: 17, color: 'black', fontWeight: '600' }}/>
                 </View>
             </View>
 

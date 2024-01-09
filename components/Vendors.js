@@ -68,7 +68,7 @@ const Vendors = () => {
     return (
         <View style={{ flex: 1 }}>
             {/* home app bar */}
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 23, marginHorizontal: 24 }}>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 23, marginHorizontal:24 }}>
                 <TouchableOpacity onPress={() => navigation.navigate("Home")}>
                     <Image source={require("../assets/Icons/Arrow_Left.png")} style={{ tintColor: 'black' }} />
                 </TouchableOpacity>
@@ -77,17 +77,17 @@ const Vendors = () => {
                 <TouchableOpacity>
                     <Image source={require("../assets/Icons/Search.png")} />
                 </TouchableOpacity>
-
             </View>
 
-            <View style={{ marginTop: 20, marginLeft: 24 }}>
-                <Text style={{ fontSize: 16, }}>
+
+            <View style={{ marginTop: 20, marginHorizontal:24 }}>
+                <Text style={{ fontSize: 16, color:'grey'}}>
                     Our Vendors
                 </Text>
             </View>
 
-            <View style={{ marginLeft: 24, marginBottom: 10 }}>
-                <Text style={{ fontSize: 21, color: '#54408C', fontWeight: '700' }}>
+            <View style={{  marginBottom: 10 , marginHorizontal:24}}>
+                <Text style={{ fontSize: 20, color: '#54408C', fontWeight: '700' }}>
                     Vendors
                 </Text>
             </View>
@@ -100,13 +100,13 @@ const Vendors = () => {
                 screenOptions={{
                     tabBarScrollEnabled: true,
                     tabBarActiveTintColor: 'black',
-                    tabBarLabelStyle: { fontSize: 13, fontWeight: 'bold' },
+                    tabBarLabelStyle: { fontSize: 12, fontWeight: 'bold' },
                     tabBarStyle: {
                         backgroundColor: '#FFFFFF',
                     },
                     // tabBarItemStyle: {width: 140,},
                 }}>
-                <Tab.Screen name="All" component={All} options={{ tabBarStyle: { backgroundColor: 'white', }, tabBarItemStyle: { width: 140, }, }} />
+                <Tab.Screen name="All" component={All} options={{ tabBarStyle: { backgroundColor: 'white', }, tabBarItemStyle: {  }, }} />
                 <Tab.Screen name="Books" component={Books} />
                 <Tab.Screen name="Poems" component={Poems} />
                 <Tab.Screen name="Special for you" component={SpecialForYou} />
@@ -120,9 +120,9 @@ const Vendors = () => {
 
 const All = () => {
     return (
-        <View style={{ flex: 1 }}>
+        <View style={{ flex: 1, marginHorizontal:24 }}>
 
-            <View style={{ marginTop: 25, marginHorizontal: 23, justifyContent: 'space-around' }}>
+            <View style={{ marginTop: 0, }}>
                 <FlatList
                     data={vendorObjects}
                     numColumns={3}
@@ -131,16 +131,16 @@ const All = () => {
 
                     renderItem={({ item, index }) => {
                         return (
-                            <View style={{ marginRight: 46, marginBottom: 25 }}>
-                                <View style={{ backgroundColor: '#E5E7E9', alignContent: 'center', justifyContent: 'center', alignItems: 'center', marginVertical:20}}>
+                            <View style={{ marginRight: 8, marginBottom: 10,marginVertical:15 }}>
+                                <View style={{ backgroundColor: '#fff' }}>
                                     <Image
-                                        style={{ width: 90, height: 68, resizeMode: 'contain' }}
+                                        style={{ width: 99, height: 100, resizeMode: 'contain' }}
                                         source={item.image} />
                                 </View>
-                                <View style={{ marginTop: 12, marginBottom:6 }}>
+                                <View style={{ marginTop: 5, marginBottom:3 }}>
                                     <Text style={{ fontSize: 17, fontWeight: '600', color: 'black' }}>{item.title}</Text>
                                 </View>
-                                <View >
+                                <View style={{marginTop:5}}>
                                     {
                                         item.ratingStars == 1 ?
                                             <View style={{ flexDirection: 'row', justifyContent: 'space-around' }}>

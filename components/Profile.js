@@ -12,20 +12,20 @@ const Profile = () => {
   return (
     <View style={{ flex: 1 }}>
 
-      <View style={{ marginTop: 40 }}>
+      <View style={{ marginTop: 30 }}>
         <Text style={{ fontSize: 21, textAlign: 'center', fontWeight: '700', color: 'black' }}>
           Profile
         </Text>
       </View>
 
-      <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 25, borderTopWidth: 1, borderBottomWidth: 1, paddingVertical: 16, borderColor: 'silver', justifyContent: 'space-between' }}>
+      <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 25, borderTopWidth: 1, borderBottomWidth: 1, paddingVertical: 13, borderColor: 'silver', justifyContent: 'space-between' }}>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
           <View>
             <Image style={{ width: 68, height: 68, borderRadius: 34 }} source={require('../assets/Images/Author7.png')} />
           </View>
           <View style={{ marginLeft: 16 }}>
             <Text style={{ fontSize: 18, color: 'black', fontWeight: '700' }}>Anna Doe</Text>
-            <Text style={{ fontSize: 16, color: 'grey' }}>+92 333 4246144</Text>
+            <Text style={{ fontSize: 16, color: 'grey' }}>(+92) 333 4246144</Text>
           </View>
         </View>
         <View style={{}}>
@@ -40,157 +40,156 @@ const Profile = () => {
 
 
 
+        <TouchableOpacity onPress={() => navigation.navigate("MyAccount")}>
 
-      <TouchableOpacity onPress={()=>navigation.navigate("MyAccount")}>
-
-        <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 20, justifyContent: 'space-between' }}>
-          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <View style={{ backgroundColor: 'lightgrey', padding: 10, borderRadius: 50 }}>
-              <Image style={{ width: 25, height: 25, borderRadius: 30, resizeMode: 'contain', tintColor: '#54408C' }} source={require('../assets/Icons/profileicon.png')} />
+          <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 17, justifyContent: 'space-between' }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <View style={{ backgroundColor: '#fff', padding: 10, borderRadius: 50 }}>
+                <Image style={{ width: 23, height: 23, borderRadius: 30, resizeMode: 'contain', tintColor: '#54408C' }} source={require('../assets/Icons/profileicon.png')} />
+              </View>
+              <View style={{ marginLeft: 16 }}>
+                <Text style={{ fontSize: 16, color: 'black', fontWeight: '700' }}>My Account</Text>
+              </View>
             </View>
-            <View style={{ marginLeft: 16 }}>
-              <Text style={{ fontSize: 18, color: 'black', fontWeight: '700' }}>My Account</Text>
-            </View>
-          </View>
 
-          <View style={{}}>
-            <View>
-              <Image source={require('../assets/Icons/nextarrow.png')} />
-            </View>
-          </View>
-        </View>
-      </TouchableOpacity>
-
-
-
-
-      <TouchableOpacity onPress={()=>navigation.navigate("HomeSetMap")}>
-
-        <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 20, justifyContent: 'space-between' }}>
-          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <View style={{ backgroundColor: 'lightgrey', padding: 10, borderRadius: 50 }}>
-              <Image style={{ width: 25, height: 25, borderRadius: 30, resizeMode: 'contain', tintColor: '#54408C' }} source={require('../assets/Icons/Location.png')} />
-            </View>
-            <View style={{ marginLeft: 16 }}>
-              <Text style={{ fontSize: 18, color: 'black', fontWeight: '700' }}>Address</Text>
+            <View style={{}}>
+              <View>
+                <Image source={require('../assets/Icons/nextarrow.png')} />
+              </View>
             </View>
           </View>
+        </TouchableOpacity>
 
-          <View style={{}}>
-            <View>
-              <Image source={require('../assets/Icons/nextarrow.png')} />
+
+
+
+        <TouchableOpacity onPress={() => navigation.navigate("HomeSetMap")}>
+
+          <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 17, justifyContent: 'space-between' }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <View style={{ backgroundColor: '#fff', padding: 10, borderRadius: 50 }}>
+                <Image style={{ width: 23, height: 23, borderRadius: 30, resizeMode: 'contain', tintColor: '#54408C' }} source={require('../assets/Icons/Location.png')} />
+              </View>
+              <View style={{ marginLeft: 16 }}>
+                <Text style={{ fontSize: 16, color: 'black', fontWeight: '700' }}>Address</Text>
+              </View>
+            </View>
+
+            <View style={{}}>
+              <View>
+                <Image source={require('../assets/Icons/nextarrow.png')} />
+              </View>
             </View>
           </View>
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
 
 
 
 
-      <TouchableOpacity onPress={()=>navigation.navigate("Offers")}>
+        <TouchableOpacity onPress={() => navigation.navigate("Offers")}>
 
-        <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 20, justifyContent: 'space-between' }}>
-          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <View style={{ backgroundColor: 'lightgrey', padding: 10, borderRadius: 50 }}>
-              <Image style={{ width: 25, height: 25, borderRadius: 30, resizeMode: 'contain', tintColor: '#54408C' }} source={require('../assets/Icons/offerspromos.png')} />
+          <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 17, justifyContent: 'space-between' }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <View style={{ backgroundColor: '#fff', padding: 10, borderRadius: 50 }}>
+                <Image style={{ width: 23, height: 23, borderRadius: 30, resizeMode: 'contain', tintColor: '#54408C' }} source={require('../assets/Icons/offerspromos.png')} />
+              </View>
+              <View style={{ marginLeft: 16 }}>
+                <Text style={{ fontSize: 16, color: 'black', fontWeight: '700' }}>Offers & Promos</Text>
+              </View>
             </View>
-            <View style={{ marginLeft: 16 }}>
-              <Text style={{ fontSize: 18, color: 'black', fontWeight: '700' }}>Offers & Promos</Text>
-            </View>
-          </View>
 
-          <View style={{}}>
-            <View>
-              <Image source={require('../assets/Icons/nextarrow.png')} />
-            </View>
-          </View>
-        </View>
-      </TouchableOpacity>
-
-
-
-
-      <TouchableOpacity onPress={()=>navigation.navigate("YourFavorites")}>
-
-        <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 20, justifyContent: 'space-between' }}>
-          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <View style={{ backgroundColor: 'lightgrey', padding: 10, borderRadius: 50 }}>
-              <Image style={{ width: 25, height: 25, borderRadius: 30, resizeMode: 'contain', tintColor: '#54408C' }} source={require('../assets/Icons/heart.png')} />
-            </View>
-            <View style={{ marginLeft: 16 }}>
-              <Text style={{ fontSize: 18, color: 'black', fontWeight: '700' }}>Your Favourites</Text>
+            <View style={{}}>
+              <View>
+                <Image source={require('../assets/Icons/nextarrow.png')} />
+              </View>
             </View>
           </View>
+        </TouchableOpacity>
 
-          <View style={{}}>
-            <View>
-              <Image source={require('../assets/Icons/nextarrow.png')} />
+
+
+
+        <TouchableOpacity onPress={() => navigation.navigate("YourFavorites")}>
+
+          <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 17, justifyContent: 'space-between' }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <View style={{ backgroundColor: '#fff', padding: 10, borderRadius: 50 }}>
+                <Image style={{ width: 23, height: 23, borderRadius: 30, resizeMode: 'contain', tintColor: '#54408C' }} source={require('../assets/Icons/heart.png')} />
+              </View>
+              <View style={{ marginLeft: 16 }}>
+                <Text style={{ fontSize: 16, color: 'black', fontWeight: '700' }}>Your Favourites</Text>
+              </View>
+            </View>
+
+            <View style={{}}>
+              <View>
+                <Image source={require('../assets/Icons/nextarrow.png')} />
+              </View>
             </View>
           </View>
-        </View>
-      </TouchableOpacity>
+        </TouchableOpacity>
 
 
 
 
-      <TouchableOpacity onPress={()=>navigation.navigate("OrderHistory")}>
+        <TouchableOpacity onPress={() => navigation.navigate("OrderHistory")}>
 
-        <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 20, justifyContent: 'space-between' }}>
-          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <View style={{ backgroundColor: 'lightgrey', padding: 10, borderRadius: 50 }}>
-              <Image style={{ width: 25, height: 25, borderRadius: 30, resizeMode: 'contain', tintColor: '#54408C' }} source={require('../assets/Icons/orderhistory.png')} />
+          <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 17, justifyContent: 'space-between' }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <View style={{ backgroundColor: '#fff', padding: 10, borderRadius: 50 }}>
+                <Image style={{ width: 23, height: 23, borderRadius: 30, resizeMode: 'contain', tintColor: '#54408C' }} source={require('../assets/Icons/orderhistory.png')} />
+              </View>
+              <View style={{ marginLeft: 16 }}>
+                <Text style={{ fontSize: 16, color: 'black', fontWeight: '700' }}>Order History</Text>
+              </View>
             </View>
-            <View style={{ marginLeft: 16 }}>
-              <Text style={{ fontSize: 18, color: 'black', fontWeight: '700' }}>Order History</Text>
-            </View>
-          </View>
 
-          <View style={{}}>
-            <View>
-              <Image source={require('../assets/Icons/nextarrow.png')} />
-            </View>
-          </View>
-        </View>
-      </TouchableOpacity>
-
-
-
-
-      <TouchableOpacity onPress={()=>navigation.navigate("HelpCenter")}>
-
-        <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 20, justifyContent: 'space-between' }}>
-          <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-            <View style={{ backgroundColor: 'lightgrey', padding: 10, borderRadius: 50 }}>
-              <Image style={{ width: 25, height: 25, borderRadius: 30, resizeMode: 'contain', tintColor: '#54408C' }} source={require('../assets/Icons/helpcenter.png')} />
-            </View>
-            <View style={{ marginLeft: 16 }}>
-              <Text style={{ fontSize: 18, color: 'black', fontWeight: '700' }}>Help Center</Text>
+            <View style={{}}>
+              <View>
+                <Image source={require('../assets/Icons/nextarrow.png')} />
+              </View>
             </View>
           </View>
+        </TouchableOpacity>
 
-          <View style={{}}>
-            <View>
-              <Image source={require('../assets/Icons/nextarrow.png')} />
+
+
+
+        <TouchableOpacity onPress={() => navigation.navigate("HelpCenter")}>
+
+          <View style={{ flexDirection: 'row', alignItems: 'center', paddingHorizontal: 25, marginTop: 0, width: '100%', paddingVertical: 17, justifyContent: 'space-between', marginBottom: 100 }}>
+            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+              <View style={{ backgroundColor: '#fff', padding: 10, borderRadius: 50 }}>
+                <Image style={{ width: 23, height: 23, borderRadius: 30, resizeMode: 'contain', tintColor: '#54408C' }} source={require('../assets/Icons/helpcenter.png')} />
+              </View>
+              <View style={{ marginLeft: 16 }}>
+                <Text style={{ fontSize: 16, color: 'black', fontWeight: '700' }}>Help Center</Text>
+              </View>
+            </View>
+
+            <View style={{}}>
+              <View>
+                <Image source={require('../assets/Icons/nextarrow.png')} />
+              </View>
             </View>
           </View>
-        </View>
-      </TouchableOpacity>
-
+        </TouchableOpacity>
+      
 
       <Modal
         animationType="slide"
         transparent={true}
         visible={logout}>
         <View style={{ flex: 1, backgroundColor: 'rgba(0,0,0,0.5)' }}>
-          <View style={{ flex: 1, backgroundColor: 'white', marginTop: 480, elevation: 10, borderTopLeftRadius: 50, borderTopRightRadius: 50, }}>
-            <View style={{ marginTop: 16, marginHorizontal: 24 }}>
+          <View style={{ flex: 1, backgroundColor: 'white', marginTop: 420, elevation: 10, borderTopLeftRadius: 50, borderTopRightRadius: 50, }}>
+            <View style={{ marginTop: 26, marginHorizontal: 24 }}>
               <View>
                 <TouchableOpacity onPress={() => setLogout(false)}>
                   <View style={{ height: 5, width: 56, backgroundColor: 'gray', alignSelf: 'center' }}></View>
                 </TouchableOpacity>
               </View>
               <View style={{ marginTop: 16 }}>
-                <Text style={{ fontSize: 19, color: 'black', fontWeight: '700' }}>
+                <Text style={{ fontSize: 20, color: 'black', fontWeight: '700' }}>
                   Logout
                 </Text>
               </View>
@@ -202,7 +201,7 @@ const Profile = () => {
                   </Text>
                 </View>
                 <View style={{ marginTop: 24 }}>
-                  <TouchableOpacity onPress={()=>navigation.navigate("SignIn1")}>
+                  <TouchableOpacity onPress={() => navigation.navigate("SignIn1")}>
                     <Text style={styles.btnlogout}>
                       Logout
                     </Text>
@@ -210,7 +209,7 @@ const Profile = () => {
                 </View>
 
                 <View style={{ marginTop: 16 }}>
-                  <TouchableOpacity onPress={()=>setLogout(false)}>
+                  <TouchableOpacity onPress={() => setLogout(false)}>
                     <Text style={styles.btncancel}>
                       Cancel
                     </Text>

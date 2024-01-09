@@ -12,15 +12,15 @@ const YourFavorites = () => {
                 <TouchableOpacity onPress={() => {navigation.navigate("Profile") }}>
                     <Image source={require("../assets/Icons/Arrow_Left.png")} style={{ tintColor: 'black' }} />
                 </TouchableOpacity>
-                <View style={{ marginRight: 104 }}>
+                <View style={{ marginHorizontal: 74 }}>
                     <Text style={{ fontSize: 21, color: 'black', fontWeight: '700' }}>Your Favorites</Text>
                 </View>
             </View>
 
 
-            <View style={{ marginTop: 16 }}>
+            <View style={{ marginTop: 20 }}>
 
-                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, paddingVertical: 16, borderColor: 'silver', justifyContent: 'space-between' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, paddingVertical: 10, borderColor: 'silver', justifyContent: 'space-between' }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <View>
                             <Image style={{ width: 68, height: 68, borderRadius: 10 }} source={require('../assets/Images/categoryBook1.png')} />
@@ -39,7 +39,7 @@ const YourFavorites = () => {
 
 
 
-                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, paddingVertical: 16, borderColor: 'silver', justifyContent: 'space-between' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, paddingVertical: 10, borderColor: 'silver', justifyContent: 'space-between' }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <View>
                             <Image style={{ width: 68, height: 68, borderRadius: 10 }} source={require('../assets/Images/categoryBook2.png')} />
@@ -59,7 +59,7 @@ const YourFavorites = () => {
 
 
 
-                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, paddingVertical: 16, borderColor: 'silver', justifyContent: 'space-between' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, paddingVertical: 10, borderColor: 'silver', justifyContent: 'space-between' }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <View>
                             <Image style={{ width: 68, height: 68, borderRadius: 10 }} source={require('../assets/Images/categoryBook3.png')} />
@@ -78,7 +78,7 @@ const YourFavorites = () => {
 
 
 
-                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, paddingVertical: 16, borderColor: 'silver', justifyContent: 'space-between' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', borderBottomWidth: 1, paddingVertical: 10, borderColor: 'silver', justifyContent: 'space-between' }}>
                     <View style={{ flexDirection: 'row', alignItems: 'center' }}>
                         <View>
                             <Image style={{ width: 68, height: 68, borderRadius: 10 }} source={require('../assets/Images/categoryBook4.png')} />

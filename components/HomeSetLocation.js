@@ -11,7 +11,7 @@ const HomeSetLocation = () => {
 
             {/* home app bar */}
             <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 16, }}>
-                <TouchableOpacity onPress={() => {navigation.navigate("HomeSetMap") }}>
+                <TouchableOpacity onPress={() => { navigation.navigate("HomeSetMap") }}>
                     <Image source={require("../assets/Icons/Arrow_Left.png")} style={{ tintColor: 'black' }} />
                 </TouchableOpacity>
 
@@ -31,8 +31,10 @@ const HomeSetLocation = () => {
                 </View>
                 <View style={{ marginTop: 6 }}>
                     <TextInput
+                    inputMode='numeric'
                         placeholder='Phone'
-                        style={{ color: '#B8B8B8', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+                        placeholderTextColor={"grey"}
+                        style={{ color: 'black', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                     />
                 </View>
             </View>
@@ -45,8 +47,9 @@ const HomeSetLocation = () => {
                 </View>
                 <View style={{ marginTop: 6 }}>
                     <TextInput
+                        placeholderTextColor={"grey"}
                         placeholder='Name'
-                        style={{ color: '#B8B8B8', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+                        style={{ color: 'black', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                     />
                 </View>
             </View>
@@ -59,8 +62,9 @@ const HomeSetLocation = () => {
                 </View>
                 <View style={{ marginTop: 6 }}>
                     <TextInput
+                        placeholderTextColor={"grey"}
                         placeholder='Governorate'
-                        style={{ color: '#B8B8B8', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+                        style={{ color: 'black', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                     />
                 </View>
             </View>
@@ -73,8 +77,9 @@ const HomeSetLocation = () => {
                 </View>
                 <View style={{ marginTop: 6 }}>
                     <TextInput
+                        placeholderTextColor={"grey"}
                         placeholder='City'
-                        style={{ color: '#B8B8B8', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+                        style={{ color: 'black', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                     />
                 </View>
             </View>
@@ -87,8 +92,9 @@ const HomeSetLocation = () => {
                 </View>
                 <View style={{ marginTop: 6 }}>
                     <TextInput
+                        placeholderTextColor={"grey"}
                         placeholder='Block'
-                        style={{ color: '#B8B8B8', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+                        style={{ color: 'black', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                     />
                 </View>
             </View>
@@ -101,8 +107,9 @@ const HomeSetLocation = () => {
                 </View>
                 <View style={{ marginTop: 6 }}>
                     <TextInput
+                        placeholderTextColor={"grey"}
                         placeholder='Street name /number'
-                        style={{ color: '#B8B8B8', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+                        style={{ color: 'black', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                     />
                 </View>
             </View>
@@ -115,8 +122,9 @@ const HomeSetLocation = () => {
                 </View>
                 <View style={{ marginTop: 6 }}>
                     <TextInput
+                        placeholderTextColor={"grey"}
                         placeholder='Building name /number'
-                        style={{ color: '#B8B8B8', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+                        style={{ color: 'black', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                     />
                 </View>
             </View>
@@ -129,8 +137,10 @@ const HomeSetLocation = () => {
                 </View>
                 <View style={{ marginTop: 6 }}>
                     <TextInput
+                    inputMode='numeric'
+                        placeholderTextColor={"grey"}
                         placeholder='Floor (option)'
-                        style={{ color: '#B8B8B8', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+                        style={{ color: 'black', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                     />
                 </View>
             </View>
@@ -143,8 +153,9 @@ const HomeSetLocation = () => {
                 </View>
                 <View style={{ marginTop: 6 }}>
                     <TextInput
+                        placeholderTextColor={"grey"}
                         placeholder='Flat (option)'
-                        style={{ color: '#B8B8B8', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+                        style={{ color: 'black', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                     />
                 </View>
             </View>
@@ -157,8 +168,9 @@ const HomeSetLocation = () => {
                 </View>
                 <View style={{ marginTop: 6 }}>
                     <TextInput
+                        placeholderTextColor={"grey"}
                         placeholder='Avenue (option)'
-                        style={{ color: '#B8B8B8', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+                        style={{ color: 'black', borderRadius: 10, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                     />
                 </View>
             </View>

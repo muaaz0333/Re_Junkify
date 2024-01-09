@@ -6,7 +6,7 @@ const SuccessVerification = () => {
     const navigation = useNavigation();
 
   return (
-    <View style={{flex:1,margin: 10, padding: 10 }}>
+    <View style={{flex:1,margin: 24 }}>
     <View style={{alignItems:'center', marginHorizontal: 107, marginTop:209 }}>
       <Image source={require ('../assets/Icons/success.png')}/>
       </View>
@@ -15,8 +15,8 @@ const SuccessVerification = () => {
     <Text style={{textAlign:'center', fontSize:25, color:'black', fontWeight:'700'}}>Congratulations!</Text>
 </View>
 
-<View style={{marginTop:8, marginHorizontal:24}}>
-    <Text style={{textAlign:'center', fontSize:18}}>
+<View style={{marginTop:12,}}>
+    <Text style={{textAlign:'center', fontSize:17, color:'grey'}}>
         your account is complete, please enjoy the best menu from us.
     </Text>
 </View>
