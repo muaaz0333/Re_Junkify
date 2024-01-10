@@ -2,10 +2,11 @@ import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput } from 'reac
 import React, { useState } from 'react'
 import { Icon } from 'react-native-elements'
 import { useNavigation } from '@react-navigation/native';
-
+// import { Validator } from 'react';
+import auth from '@react-native-firebase/auth'
 
 const Signup = () => {
-    const navigation = useNavigation();
+const navigation = useNavigation();
     const [isSecureEntry, setIsSecureEntry] = useState(true)
     const [password, setPassword] = useState('');
     const [suggestions, setSuggestions] = useState([]);
@@ -99,7 +100,7 @@ const Signup = () => {
 
             <View style={{ flexDirection: 'row', alignItems: 'center', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 3, paddingHorizontal: 16 }}>
                 <TextInput
-                    placeholder='Your Password'
+                    placeholder='********'
                     placeholderTextColor={"grey"}
                     secureTextEntry={isSecureEntry}
                     style={{ flex: 1, color: '#B8B8B8', }}

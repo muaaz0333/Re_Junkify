@@ -40,7 +40,7 @@ const SignIn1 = () => {
         <TextInput
           placeholder='Your Email'
           placeholderTextColor={"grey"}
-          style={{ color: 'grey', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+          style={{ color: 'black', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
         />
       </View>
 
@@ -52,10 +52,10 @@ const SignIn1 = () => {
 
       <View style={{ flexDirection: 'row', alignItems: 'center', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 3, paddingHorizontal: 16 }}>
         <TextInput
-          placeholder='Your Password'
+          placeholder='********'
           placeholderTextColor={"grey"}
           secureTextEntry={isSecureEntry}
-          style={{ flex: 1, color: '#B8B8B8', }}
+          style={{ flex: 1, color: 'black', }}
 
         />
         <TouchableOpacity onPress={() => setIsSecureEntry((prev) => !prev)}>

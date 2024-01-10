@@ -546,7 +546,7 @@ const Home = () => {
                         {
                             data.map((item, index) => {
                                 return (
-                                    <View style={{ width: 8, height: 8, borderRadius: 4, backgroundColor: currentIndex == index ? '#54408C' : 'gray', marginLeft: 5 }}>
+                                    <View style={{ width: 7, height: 7, borderRadius: 4, backgroundColor: currentIndex == index ? '#54408C' : 'gray', marginLeft: 5 }}>
 
                                     </View>
                                 )
@@ -558,7 +558,7 @@ const Home = () => {
 
                 {/*  books flatlist */}
                 <View style={{ marginTop: 27, flexDirection: 'row', justifyContent: 'space-between' ,marginHorizontal:24 }}>
-                    <Text style={{ fontSize: 19, color: 'black', fontWeight: 'bold' }}>Top of Week</Text>
+                    <Text style={{ fontSize: 18, color: 'black', fontWeight: 'bold' }}>Top of Week</Text>
                     <TouchableOpacity >
                         <Text style={{ color: '#54408C', fontSize: 16, fontWeight: '800' }}>
                             See all
@@ -591,7 +591,7 @@ const Home = () => {
 
                 {/* Best Vendors */}
                 <View style={{ marginTop: 27,  flexDirection: 'row', justifyContent: 'space-between' ,marginHorizontal:24 }}>
-                    <Text style={{ fontSize: 19, color: 'black', fontWeight: 'bold' }}>Best Vendors</Text>
+                    <Text style={{ fontSize: 18, color: 'black', fontWeight: 'bold' }}>Best Vendors</Text>
                     <TouchableOpacity onPress={() => { { navigation.navigate("Vendors") } }}>
                         <Text style={{ color: '#54408C', fontSize: 16, fontWeight: '800' }}>
                             See all
@@ -622,7 +622,7 @@ const Home = () => {
 
                 {/* Authors */}
                 <View style={{ marginTop: 26,  flexDirection: 'row', justifyContent: 'space-between',marginHorizontal:24  }}>
-                    <Text style={{ fontSize: 19, color: 'black', fontWeight: 'bold' }}>Authors</Text>
+                    <Text style={{ fontSize: 18, color: 'black', fontWeight: 'bold' }}>Authors</Text>
                     <TouchableOpacity onPress={() => { { navigation.navigate("Authors") } }}>
                         <Text style={{ color: '#54408C', fontSize: 16, fontWeight: '800' }}>
                             See all
@@ -843,7 +843,7 @@ const styles = StyleSheet.create({
         // marginRight: 24,
         color: 'white',
         borderRadius: 40,
-        fontSize: 18,
+        fontSize: 17,
         fontWeight: '600',
         paddingVertical: 8,
         paddingHorizontal: 24,

@@ -32,7 +32,6 @@ import OrderStatus from './components/OrderStatus';
 import OrderStatusRating from './components/OrderStatusRating';
 import DeliveryNotification from './components/DeliveryNotification';
 import NewsPromosNotification from './components/NewsPromosNotification';
-
 import MyAccount from './components/MyAccount';
 import YourFavorites from './components/YourFavorites';
 import OrderHistory from './components/OrderHistory';

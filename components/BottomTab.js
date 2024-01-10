@@ -64,37 +64,37 @@ const BottomTab = () => {
 
   const navigation = useNavigation();
   return (
-    <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',paddingVertical:3 }}>
+    <View style={{ flex: 1, flexDirection: 'row', alignItems: 'center', justifyContent: 'space-evenly',paddingVertical:2 }}>
 
 
 
 
       <TouchableOpacity onPress={()=>navigation.navigate('Home')}>
         <View style={{ alignItems: 'center' }}>
-          <Image style={{tintColor:handleColorChange("Home"), width:20, height:20}} source={require("../assets/Icons/home-fill.png")} />
-          <Text style={{color:'grey', marginTop:3}}>Home</Text>
+          <Image style={{tintColor:handleColorChange("Home"), width:18, height:18}} source={require("../assets/Icons/home-fill.png")} />
+          <Text style={{color:'grey', marginTop:3,  fontSize:12}}>Home</Text>
         </View>
       </TouchableOpacity>
 
 
       <TouchableOpacity onPress={()=>navigation.navigate('Category')}>
         <View style={{ alignItems: 'center' }}>
-          <Image style={{tintColor: handleColorChange("Category")}} source={require("../assets/Icons/category.png")} />
-          <Text style={{color:'grey', marginTop:3}}>Category</Text>
+          <Image style={{tintColor: handleColorChange("Category"), }} source={require("../assets/Icons/category.png")} />
+          <Text style={{color:'grey', marginTop:3,  fontSize:12}}>Category</Text>
         </View>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={()=>navigation.navigate('Cart')}>
         <View style={{ alignItems: 'center' }}>
-          <Image style={{tintColor: handleColorChange("Cart")}} source={require("../assets/Icons/Cart.png")} />
-          <Text style={{color:'grey', marginTop:3}}>Cart</Text>
+          <Image style={{tintColor: handleColorChange("Cart"),}} source={require("../assets/Icons/Cart.png")} />
+          <Text style={{color:'grey', marginTop:3,  fontSize:12}}>Cart</Text>
         </View>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={()=>navigation.navigate('Profile')}>
         <View style={{ alignItems: 'center' }}>
-          <Image style={{tintColor:handleColorChange("Profile")}} source={require("../assets/Icons/Profile.png")} />
-          <Text style={{color:'grey', marginTop:3}}>Profile</Text>
+          <Image style={{tintColor:handleColorChange("Profile"), }} source={require("../assets/Icons/Profile.png")} />
+          <Text style={{color:'grey', marginTop:3,  fontSize:12}}>Profile</Text>
         </View>
       </TouchableOpacity>
 
