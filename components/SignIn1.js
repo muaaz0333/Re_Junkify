@@ -1,10 +1,31 @@
-import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput, Alert } from 'react-native'
 import React, { useState } from 'react'
 import { Icon } from 'react-native-elements'
 import { useNavigation } from '@react-navigation/native';
+import auth from '@react-native-firebase/auth';
 
 
 const SignIn1 = () => {
+
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+
+  const loginFn = () => {
+    auth().signInWithEmailAndPassword(email, password)
+      .then(() => {
+        if (email === '' && password === '') {
+          Alert.alert("Please Enter Email and Password")
+        }
+        // console.log(res)
+        Alert.alert("Logged In")
+        navigation.navigate("Home")
+      })
+      .catch((err) => {
+        console.log(err)
+        Alert.alert(err.code)
+      })
+  }
+
   const navigation = useNavigation();
   const [isSecureEntry, setIsSecureEntry] = useState(true)
 
@@ -38,7 +59,10 @@ const SignIn1 = () => {
 
       <View>
         <TextInput
+          value={email}
+          onChangeText={(text) => setEmail(text)}
           placeholder='Your Email'
+          inputMode='email'
           placeholderTextColor={"grey"}
           style={{ color: 'black', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
         />
@@ -52,6 +76,8 @@ const SignIn1 = () => {
 
       <View style={{ flexDirection: 'row', alignItems: 'center', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 3, paddingHorizontal: 16 }}>
         <TextInput
+          value={password}
+          onChangeText={(text) => setPassword(text)}
           placeholder='********'
           placeholderTextColor={"grey"}
           secureTextEntry={isSecureEntry}
@@ -70,7 +96,7 @@ const SignIn1 = () => {
       </View>
 
       <View style={{ marginTop: 22 }}>
-        <TouchableOpacity onPress={() => { OnLoginHandler() }}><Text style={styles.btncontinue} >Login</Text></TouchableOpacity>
+        <TouchableOpacity onPress={() => loginFn()}><Text style={styles.btncontinue} >Login</Text></TouchableOpacity>
       </View>
 
       <View style={{ marginTop: 22 }}>

@@ -1,12 +1,31 @@
-import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput } from 'react-native'
-import React, { useState } from 'react'
+import { StyleSheet, Text, View, TouchableOpacity, Image, TextInput, Alert } from 'react-native'
+import React, { useState, useEffect } from 'react'
 import { Icon } from 'react-native-elements'
 import { useNavigation } from '@react-navigation/native';
+import auth from '@react-native-firebase/auth';
 // import { Validator } from 'react';
-import auth from '@react-native-firebase/auth'
+
 
 const Signup = () => {
-const navigation = useNavigation();
+
+    const [email, setEmail] = useState("")
+    const [fPassword, setFPassword] = useState("")
+    const [name, setName] = useState("")
+
+    const signupTestFn = () => {
+        auth().createUserWithEmailAndPassword(email, fPassword).then(() => {
+            Alert.alert("User Created with credentials\n" + email, fPassword + "\n\n Please Login")
+            navigation.navigate("SignIn1")
+        })
+            .catch((err) => {
+                console.log(err.code)
+                Alert.alert(err.code)
+            })
+    }
+
+
+
+    const navigation = useNavigation();
     const [isSecureEntry, setIsSecureEntry] = useState(true)
     const [password, setPassword] = useState('');
     const [suggestions, setSuggestions] = useState([]);
@@ -26,7 +45,7 @@ const navigation = useNavigation();
 
         // if (!/[^A-Za-z0-9]/.test(input)) {
         //     newSuggestions.push('Include at least one special character')
-        
+
 
         setSuggestions(newSuggestions);
 
@@ -51,7 +70,7 @@ const navigation = useNavigation();
     return (
         <View style={{ flex: 1, margin: 20, padding: 10, }}>
             <View style={{ alignSelf: 'flex-start', marginTop: 13 }}>
-                <TouchableOpacity style={styles.skiptxt} onPress={() => {  }}>
+                <TouchableOpacity style={styles.skiptxt} onPress={() => { }}>
                     <Image source={require('../assets/Icons/Arrow_Left.png')} />
                 </TouchableOpacity>
             </View>
@@ -62,7 +81,7 @@ const navigation = useNavigation();
                 </Text>
             </View>
             <View>
-                <Text style={{ marginTop: 8, lineHeight: 24, fontSize: 15 , color:'grey'}}>Create account and choose favorite menu</Text>
+                <Text style={{ marginTop: 8, lineHeight: 24, fontSize: 15, color: 'grey' }}>Create account and choose favorite menu</Text>
             </View>
 
             <View>
@@ -73,8 +92,9 @@ const navigation = useNavigation();
             <View>
                 <TextInput
                     placeholder='Your Name'
+                    inputMode='text'
                     placeholderTextColor={"grey"}
-                    style={{ color: '#B8B8B8', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+                    style={{ color: 'black', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                 />
             </View>
 
@@ -86,9 +106,12 @@ const navigation = useNavigation();
 
             <View>
                 <TextInput
+                    inputMode='email'
                     placeholder='Your Email'
+                    value={email}
+                    onChangeText={(text) => setEmail(text)}
                     placeholderTextColor={"grey"}
-                    style={{ color: '#B8B8B8', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
+                    style={{ color: 'black', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 12, paddingHorizontal: 16 }}
                 />
             </View>
 
@@ -100,13 +123,15 @@ const navigation = useNavigation();
 
             <View style={{ flexDirection: 'row', alignItems: 'center', borderRadius: 10, marginTop: 6, backgroundColor: '#FAFAFA', paddingVertical: 3, paddingHorizontal: 16 }}>
                 <TextInput
-                    placeholder='********'
+                    placeholder='Your Password'
                     placeholderTextColor={"grey"}
                     secureTextEntry={isSecureEntry}
-                    style={{ flex: 1, color: '#B8B8B8', }}
+                    style={{ flex: 1, color: 'black', }}
+                    value={fPassword}
                     onChangeText={(text) => {
                         setPassword(text);
                         validatePassword(text)
+                        setFPassword(text)
                     }}
 
 
@@ -117,7 +142,7 @@ const navigation = useNavigation();
                     }
                 </TouchableOpacity>
             </View>
-            <View style={{marginTop:12}}>
+            <View style={{ marginTop: 12 }}>
                 {/* <Text style={styles.strengthText}>
                     Password Strength: {strength}
                 </Text> */}
@@ -128,7 +153,7 @@ const navigation = useNavigation();
                         </Text>))}
                 </Text>
                 {/* <View style={styles.strengthMeter}> */}
-                    {/* <View style={{
+                {/* <View style={{
                         width: `${(strength === 'Very Strong' ? 100 :
                             (strength === 'Strong' ? 75 :
                                 (strength === 'Moderate' ? 50 :
@@ -145,7 +170,7 @@ const navigation = useNavigation();
 
 
             <View style={{ marginTop: 15 }}>
-                <TouchableOpacity onPress={() =>{navigation.navigate("VerificationEmail")}}><Text style={styles.btncontinue} >Register</Text></TouchableOpacity>
+                <TouchableOpacity onPress={() => signupTestFn()}><Text style={styles.btncontinue} >Register</Text></TouchableOpacity>
             </View>
 
             <View style={{ marginTop: 22 }}>
@@ -171,7 +196,7 @@ const navigation = useNavigation();
 
 export default Signup
 
-const styles = StyleSheet.create({ 
+const styles = StyleSheet.create({
     skiptxt: {
 
     },
@@ -198,24 +223,24 @@ const styles = StyleSheet.create({
     },
 
 
-   
-    
-  
-    
-    strengthText: { 
-        fontWeight: 'bold', 
-        fontSize: 18, 
-        color: '#007700', 
-    }, 
-    suggestionsText: { 
-        color: '#A6A6A6', 
-    }, 
-    strengthMeter: { 
-        width: '80%', 
-        height: 20, 
-        backgroundColor: '#ccc', 
-        marginTop: 20, 
-        borderRadius: 10, 
-        overflow: 'hidden', 
-    }, 
+
+
+
+
+    strengthText: {
+        fontWeight: 'bold',
+        fontSize: 18,
+        color: '#007700',
+    },
+    suggestionsText: {
+        color: '#A6A6A6',
+    },
+    strengthMeter: {
+        width: '80%',
+        height: 20,
+        backgroundColor: '#ccc',
+        marginTop: 20,
+        borderRadius: 10,
+        overflow: 'hidden',
+    },
 })

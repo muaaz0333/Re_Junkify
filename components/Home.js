@@ -493,7 +493,7 @@ const Home = () => {
     const [modalVisible, setModalVisible] = useState(false);
 
     return (
-        <View style={{ flex: 1,}}>
+        <View style={{ flex: 1}}>
 
 
             {/* home app bar */}
