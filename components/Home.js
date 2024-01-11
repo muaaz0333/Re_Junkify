@@ -798,7 +798,7 @@ const Home = () => {
 
                                 <View>
                                     <Text style={{ color: '#54408C', fontSize: 15, fontWeight: '700', marginLeft: 17 }}>
-                                        {price}
+                                       $ {price}
                                     </Text>
                                 </View>
 
