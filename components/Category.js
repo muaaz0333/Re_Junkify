@@ -1,9 +1,10 @@
 import { View, Text, Image, FlatList, Dimensions, TouchableOpacity, StyleSheet, ScrollView, Modal } from 'react-native'
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs'
 import BottomTab from './BottomTab';
 import { NavigationContainer } from '@react-navigation/native';
 import { useNavigation } from '@react-navigation/native';
+import firestore from '@react-native-firebase/firestore';
 
 const Tab = createMaterialTopTabNavigator();
 
@@ -72,13 +73,14 @@ const categoryBooks = [
 
 
 
+
 const Category = () => {
   const navigation = useNavigation();
 
   return (
     <View style={{ flex: 1 }}>
       <View style={{ marginBottom: 24, flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', marginTop: 16, marginHorizontal: 24 }}>
-        <TouchableOpacity onPress={()=>{navigation.navigate("CategorySearch")}}>
+        <TouchableOpacity onPress={() => { navigation.navigate("CategorySearch") }}>
           <Image source={require("../assets/Icons/Search.png")} style={{ tintColor: 'black' }} />
         </TouchableOpacity>
 
@@ -104,7 +106,7 @@ const Category = () => {
           },
           // tabBarItemStyle: {width: 140,},
         }}>
-        <Tab.Screen name="All" component={All} options={{ tabBarStyle: {  }, tabBarItemStyle: { }, }} />
+        <Tab.Screen name="All" component={All} options={{ tabBarStyle: {}, tabBarItemStyle: {}, }} />
         <Tab.Screen name="Novels" component={Novels} />
         <Tab.Screen name="Self Love" component={SelfLove} />
         <Tab.Screen name="Science" component={Science} />
@@ -122,11 +124,65 @@ const Category = () => {
 }
 
 const All = () => {
-  return (
-    <View style={{ flex: 1 , marginHorizontal:24}}>
+  // Categories
+  // const [loading, setLoading] = useState(true); // Set loading to true on component mount
+  const [category, setCategory] = useState([]); // Initial empty array of users
+  useEffect(() => {
+    const subscriber = firestore()
+      .collection('Categories')
+      .onSnapshot(querySnapshot => {
+        const category = [];
 
-      <View style={{ marginTop: 0, marginBottom:70,  alignItems:'center'}}>
+        querySnapshot.forEach(documentSnapshot => {
+          category.push({
+            ...documentSnapshot.data(),
+            key: documentSnapshot.id,
+          });
+        });
+
+        setCategory(category);
+        // setLoading(false);
+      });
+
+    // Unsubscribe from events when no longer in use
+    return () => subscriber();
+  }, []);
+
+  // if (loading) {
+  //       return <ActivityIndicator />;
+  //   }
+
+
+
+  return (
+    <View style={{ flex: 1, marginHorizontal: 24 }}>
+
+      <View style={{ marginTop: 0, marginBottom: 70, alignItems: 'center' }}>
         <FlatList
+          data={category}
+          showsHorizontalScrollIndicator={false}
+          showsVerticalScrollIndicator={false}
+          numColumns={2}
+          renderItem={({ item }) => (
+            <View style={{ marginRight: 9, marginTop: 40, }}>
+              <View>
+                <Image style={{ width: 150, height: 160, resizeMode: 'contain', borderRadius: 10 }} source={{uri:item.Image}} />
+              </View>
+              <View>
+                <Text style={{ color: 'black', fontSize: 17, fontWeight: '700', marginTop: 8 }}>
+                  {item.Name}
+                </Text>
+              </View>
+              <View>
+                <Text style={{ color: '#54408C', fontSize: 16, fontWeight: '700', marginTop: 4 }}>
+                  ${item.Price}
+                </Text>
+              </View>
+            </View>
+
+          )}
+        />
+        {/* <FlatList
           data={categoryBooks}
           showsHorizontalScrollIndicator={false}
           showsVerticalScrollIndicator={false}
@@ -135,25 +191,25 @@ const All = () => {
           renderItem={({ item, index }) => {
             return (
               // <View style={{ marginLeft: 0, marginTop: 0 }}>
-                <View style={{ marginRight: 9, marginTop: 40,}}>
-                  <View>
-                    <Image style={{ width: 150, height: 160, resizeMode: 'contain', borderRadius: 10 }} source={item.pic} />
-                  </View>
-                  <View>
-                    <Text style={{ color: 'black', fontSize: 17, fontWeight: '700', marginTop:8 }}>
-                      {item.title}
-                    </Text>
-                  </View>
-                  <View>
-                    <Text style={{ color: '#54408C', fontSize: 16, fontWeight: '700', marginTop:4 }}>
-                      ${item.price}
-                    </Text>
-                  </View>
+              <View style={{ marginRight: 9, marginTop: 40, }}>
+                <View>
+                  <Image style={{ width: 150, height: 160, resizeMode: 'contain', borderRadius: 10 }} source={item.pic} />
                 </View>
+                <View>
+                  <Text style={{ color: 'black', fontSize: 17, fontWeight: '700', marginTop: 8 }}>
+                    {item.title}
+                  </Text>
+                </View>
+                <View>
+                  <Text style={{ color: '#54408C', fontSize: 16, fontWeight: '700', marginTop: 4 }}>
+                    ${item.price}
+                  </Text>
+                </View>
+              </View>
               // </View> 
             )
           }}
-        />
+        /> */}
       </View>
 
 
