@@ -132,7 +132,7 @@ dependencies {
   implementation 'com.google.android.gms:play-services-location:19.0.1'
   implementation 'com.google.android.gms:play-services-maps:18.0.2'
 //   implementation 'com.google.android.gms:play-services-ads:22.6.0'
-//   implementation 'com.google.firebase:firebase-analytics:21.5.0'
+  implementation 'com.google.firebase:firebase-analytics:21.5.0'
 //   implementation 'com.google.firebase:firebase-analytics-ktx:21.5.0'
 //   implementation 'com.google.firebase:firebase-appcheck-playintegrity:17.1.1'
 //   implementation 'com.google.firebase:firebase-appcheck-safetynet:16.1.2'
@@ -145,8 +145,8 @@ dependencies {
 //   implementation 'com.google.firebase:firebase-ml-model-interpreter:22.0.4'
 
 
-//   implementation "com.google.firebase:firebase-auth"
-//   implementation "com.google.firebase:firebase-firestore"
+  implementation "com.google.firebase:firebase-auth"
+  implementation "com.google.firebase:firebase-firestore"
 
 
 }
